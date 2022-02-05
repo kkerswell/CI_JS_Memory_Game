@@ -1,5 +1,7 @@
 https://codepen.io/erikterwan/pen/EVzeRP - hamburger menu
 
+https://www.fontspace.com/digits-font-f2006 - font
+
 ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
 Welcome USER_NAME,

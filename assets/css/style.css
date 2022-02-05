@@ -3,19 +3,26 @@
     --color-one: #d9005f; /* RGB value (217,0,95) */
     --color-two: #ff7f00; /* RGB value (255,127,0) */
     --color-three: #00819f; /* RGB value (0,129,159) */
-    --color-four: #87ea00; /* RGB value (135,234,0) */
+    --color-four: black; 
     --color-five: #f4f7f5; /* RGB value (244,247,245) */
 }
 
 * {
     margin: 0;
     padding: 0;
-    
 }
+
+body {
+    background-color: var(--color-two);
+    user-select: none !important;
+}
+
 /************************************ Base Styling End */
 
 
 /**************************************** Header Start */
+
+/**** Full Nav Bar ****/
 
 header {
     position: fixed;
@@ -30,66 +37,25 @@ header {
     display: block;
 }
 
-.main_nav .head_links {
-    position: absolute;
-    right: 0;
-    padding-right: 3em;
-}
+/**** Hamburger Menu ****/
 
-.head_links {
-    top: 2em;
-}
-
-.head_links li {
-    list-style: none;
-    display: inline;
-    word-spacing: 3em;
-    padding-left: 3em;
-}
-
-.head_links a {
-    text-decoration: none;
-    color: var(--color-five);
-}
-
-.head_links a:hover {
-    color: var(--color-three);
-}
-
-main {
-    float: left;
-    margin-top: 5em;
-    background-color: green;
-    height: 50vh;
-    position: relative;
-}
-
-footer {
-    float: left;
-    position: relative;
-    background-color: hotpink;
-    height: 50vh;
-}
-/**************************************** Header Start */
-
-
-/******************************** Hamburger Menu Start */
 /*
  * Made by Erik Terwan
  * 24th of November 2015
  * MIT License
  *
- *
  * If you are thinking of using this in
  * production code, beware of the browser
  * prefixes.
+ *
+ * NOTE: All code below is made by the above unless otherwise stated with word 'Original'
  */
 
 #menuToggle {
     display: block;
     position: absolute;
-    top: 2em;
-    left: 2em;
+    top: 2em; /* Original: Changed from px to em  */
+    left: 2em; /* Original: Changed from px to em  */
     z-index: 1;
     -webkit-user-select: none;
     user-select: none;
@@ -123,7 +89,7 @@ footer {
     height: 4px;
     margin-bottom: 5px;
     position: relative;   
-    background: var(--color-five);
+    background: var(--color-five); /* Original: Changed color  */
     border-radius: 3px;   
     z-index: 1;   
     transform-origin: 4px 0px;   
@@ -167,7 +133,7 @@ footer {
 */
 #menu {
     position: absolute;
-    width: 10vw;
+    width: 10vw; /* Original: Changed from px to vw  */
     margin: -100px 0 0 -50px;
     padding: 50px;
     padding-top: 125px;
@@ -182,7 +148,7 @@ footer {
    
     transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
 
-    height: 100vh;
+    height: 100vh; /* Original: added full page height  */
 }
  
 #menu li {
@@ -195,6 +161,163 @@ footer {
     transform: none;
 }
 
-/********************************** Hamburger Menu End */
+/**** Links ****/
+
+.main_nav .head_links {
+    position: absolute;
+    right: 0;
+    padding-right: 3em;
+}
+
+.head_links {
+    top: 2em;
+}
+
+.head_links li {
+    list-style: none;
+    display: inline;
+    word-spacing: 3em;
+    padding-left: 3em;
+}
+
+.head_links a {
+    text-decoration: none;
+    color: var(--color-five);
+}
+
+.head_links a:hover {
+    color: var(--color-three);
+}
 
 /****************************************** Header End */
+
+/****************************************** Main Start */
+
+main {
+    float: left;
+    margin-top: 5em;
+    position: relative;
+    width: 100%;
+    user-select: none !important;
+}
+
+/**** Main Start ****/
+
+.intro {
+    background-color: var(--color-four);
+    color: var(--color-five);
+    text-align: center;
+    line-height: 20vh;
+}
+
+.intro h1 {
+    font-size: 18em;
+    padding-top: 1em;
+}
+
+.intro h2 {
+    font-size: 10em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.intro h2:last-of-type {
+    padding-bottom: 1em;
+}
+
+.intro h3 {
+    font-size: 5em;
+    padding-top: 1em;
+}
+
+/**** How To Play Start ****/
+
+.how_to_play {
+    width: 100%;
+    background-color: var(--color-three);
+    color: var(--color-five);
+    line-height: 10em;
+}
+
+.rule_list {
+    width: 50%;
+    float: left;
+    font-size: 4rem;
+    text-align: center;
+}
+
+.rule_list_number {
+    font-family: 'digitsregular', Arial, sans-serif;
+}
+
+.rule_list_number:nth-of-type(2)::before {
+    content: "A";
+    margin-right: 20px;
+}
+
+.rule_list_number:nth-of-type(3)::before {
+    content: "2";
+    margin-right: 20px;
+}
+
+.rule_list_number:nth-of-type(4)::before {
+    content: "C";
+    margin-right: 20px;
+}
+
+.rule_list_text {
+    font-family: initial;
+}
+
+.rule_list_images {
+    width: 50%;
+    float: left;
+}
+
+.rule_list_images img {
+    display: block;
+    width: 200px;
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.rule_list_guide {
+    width: 100%;
+    clear: both;
+}
+
+.rule_list_guide div {
+    width: 45%;
+    display: inline-block;
+}
+
+.rule_list_guide_icon {
+    font-family: 'digitsregular', Arial, sans-serif;
+    font-size: 4rem;
+    text-align: right;
+    width: 95%;
+}
+
+.rule_list_guide_text {
+    text-align: left;
+    width: 95%;
+}
+/**** Game Area Start ****/
+
+.game {
+    background-color: var(--color-three);
+}
+
+/******************************************* Main End */
+
+/*************************************** Footer Start */
+
+footer {
+    float: left;
+    position: relative;
+    background-color: hotpink;
+    height: 50vh;
+}
+
+/***************************************** Footer End */
