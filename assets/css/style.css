@@ -94,7 +94,7 @@ header {
     z-index: 1;   
     transform-origin: 4px 0px;   
     transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-               background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+               /* background 0.5s cubic-bezier(0.77,0.2,0.05,1.0), */
                opacity 0.55s ease;
 }
 
@@ -126,34 +126,41 @@ header {
 #menuToggle input:checked ~ span:nth-last-child(2) {
     transform: rotate(-45deg) translate(0, -1px);
 }
- 
+
 /*
 * Make this absolute positioned
 * at the top left of the screen
 */
 #menu {
     position: absolute;
-    width: 10vw; /* Original: Changed from px to vw  */
+    /* Original: Changed from px to vw and to full width  */
+    width: 100vw;
     margin: -100px 0 0 -50px;
     padding: 50px;
     padding-top: 125px;
-   
-    background: #ededed;
+    /* 
+    * Original: Changed from standard color 
+    * to linear gradient to add opacity to remaining 
+    * view of page  
+    */
+    background: linear-gradient(to right,
+    #ededed 20%, rgba(237, 237, 237, 0.9) 20% 100%);
     list-style-type: none;
-    -webkit-font-smoothing: antialiased;
     /* to stop flickering of text in safari */
-   
+    -webkit-font-smoothing: antialiased;
     transform-origin: 0% 0%;
     transform: translate(-100%, 0);
-   
     transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
-
     height: 100vh; /* Original: added full page height  */
-}
  
+    overflow: hidden;
+
+}
+
 #menu li {
     padding: 10px 0;
     font-size: 22px;
+    width: 200px;
 }
  
 /* Slide it in from the left */
@@ -211,23 +218,23 @@ main {
 }
 
 .intro h1 {
-    font-size: 18em;
+    font-size: 15rem;
     padding-top: 1em;
 }
 
 .intro h2 {
-    font-size: 10em;
+    font-size: 10rem;
     padding-top: 1em;
     padding-bottom: 1em;
 }
 
 .intro h2:last-of-type {
-    padding-bottom: 1em;
+    padding-bottom: 4em;
 }
 
 .intro h3 {
-    font-size: 5em;
-    padding-top: 1em;
+    font-size: 3rem;
+    padding-bottom: 10em;
 }
 
 /**** How To Play Start ****/
@@ -236,7 +243,7 @@ main {
     width: 100%;
     background-color: var(--color-three);
     color: var(--color-five);
-    line-height: 10em;
+    padding-top: 20rem;
 }
 
 .rule_list {
@@ -246,8 +253,13 @@ main {
     text-align: center;
 }
 
+.rule_list_title {
+    font-size: 5rem;
+}
+
 .rule_list_number {
     font-family: 'digitsregular', Arial, sans-serif;
+    margin-top: 5rem;
 }
 
 .rule_list_number:nth-of-type(2)::before {
@@ -272,12 +284,20 @@ main {
 .rule_list_images {
     width: 50%;
     float: left;
+    margin-top: -4rem;
 }
 
 .rule_list_images img {
-    display: block;
-    width: 200px;
-    height: 200px;
+    display: inline-block;
+    width: 20rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2rem;
+}
+
+.rule_list_images img:last-of-type {
+    display: inline-block;
+    width: 44rem;
     margin-left: auto;
     margin-right: auto;
 }
@@ -285,6 +305,7 @@ main {
 .rule_list_guide {
     width: 100%;
     clear: both;
+    padding-top: 10rem;
 }
 
 .rule_list_guide div {
@@ -307,6 +328,7 @@ main {
 
 .game {
     background-color: var(--color-three);
+    padding-top: 10rem;
 }
 
 /******************************************* Main End */
@@ -318,6 +340,7 @@ footer {
     position: relative;
     background-color: hotpink;
     height: 50vh;
+    padding-top: 10rem;
 }
 
 /***************************************** Footer End */
