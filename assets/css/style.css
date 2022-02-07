@@ -27,10 +27,13 @@ body {
 header {
     position: fixed;
     float: left;
-    background-color: var(--color-two);
+    /* background-color: var(--color-two); */
+    background: linear-gradient(#ff7f00);
     height: 5em;
     width: 100%;
     z-index: 5;
+    -webkit-background-clip: padding-box; /* for Safari */
+    background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
 }
 
 .main_nav {
@@ -215,10 +218,9 @@ main {
 /**** Main Start ****/
 
 .intro {
-    background-color: var(--color-four);
-    color: var(--color-five);
     text-align: center;
     line-height: 20vh;
+    background: linear-gradient(#ff7f00, #00819f);
 }
 
 .intro h1 {
@@ -245,9 +247,11 @@ main {
 
 .how_to_play {
     width: 100%;
-    background-color: var(--color-three);
+    background: linear-gradient(#00819f, yellowgreen);
     color: var(--color-five);
-    padding-top: 20rem;
+    padding: 20rem 0;
+    float: left;
+    min-height: max-content;
 }
 
 .rule_list {
@@ -331,8 +335,12 @@ main {
 /**** Game Area Start ****/
 
 .game {
-    background-color: var(--color-three);
-    padding-top: 10rem;
+    background: linear-gradient(yellowgreen, #d9005f);
+    padding: 20rem 0;
+    width: 100%;
+    float: left;
+    display: block;
+    min-height: max-content;
 }
 
 /******************************************* Main End */
@@ -341,10 +349,9 @@ main {
 
 footer {
     float: left;
-    position: relative;
-    background-color: hotpink;
-    height: 50vh;
-    padding-top: 10rem;
+    background-color: #d9005f;
+    min-height: min-content;
+    padding: 5rem 0;
 }
 
 /***************************************** Footer End */
