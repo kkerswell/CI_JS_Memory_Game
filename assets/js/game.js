@@ -3,12 +3,17 @@
 
 class AudioController {
     constructor() {
-        this.bgMusic = new Audio('Assets/Audio/creepy.mp3');
-        this.flipSound = new Audio('Assets/Audio/flip.wav');
-        this.matchSound = new Audio('Assets/Audio/match.wav');
-        this.victorySound = new Audio('Assets/Audio/victory.wav');
-        this.gameOverSound = new Audio('Assets/Audio/gameOver.wav');
-        this.bgMusic.volume = 0.5;
+        // Sound source: https://soundimage.org/puzzle-music/#mep_12
+        this.bgMusic = new Audio('assets/audio/gamemusic.mp3');
+        // Sound source: https://mixkit.co/free-sound-effects/casino/
+        this.flipSound = new Audio('assets/audio/flip.mp3');
+        // Sound source: https://mixkit.co/free-sound-effects/game-show/
+        this.matchSound = new Audio('assets/audio/match.mp3');
+        // Sound source: https://mixkit.co/free-sound-effects/win/
+        this.victorySound = new Audio('assets/audio/victory.wav');
+        // Sound source: https://mixkit.co/free-sound-effects/game-over/
+        this.gameOverSound = new Audio('assets/audio/gameover.wav');
+        this.bgMusic.volume = 0.4;
         this.bgMusic.loop = true;
     }
     startMusic() {

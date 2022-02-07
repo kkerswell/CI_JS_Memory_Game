@@ -5,7 +5,7 @@ $(window).scroll(function(){
     
     // Changed source code to use OR in the selector
     // Source code https://stackoverflow.com/a/10687171
-    var anchors = $('main').find('[id="intro"],[id="how_to_play"],[id="game"]');
+    var anchors = $('main').find('[id="intro"],[id="howtoplay"],[id="game"]');
     
     for (var i = 0; i < anchors.length; i++){
         if (scrollTop > $(anchors[i]).offset().top && scrollTop < $(anchors[i]).offset().top + $(anchors[i]).height()) {
