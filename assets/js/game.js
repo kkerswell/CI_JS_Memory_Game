@@ -1,6 +1,3 @@
-//
-//
-
 class AudioController {
     constructor() {
         // Sound source: https://soundimage.org/puzzle-music/#mep_12
@@ -36,6 +33,28 @@ class AudioController {
     gameOver() {
         this.stopMusic();
         this.gameOverSound.play();
+    }
+
+    // Orignal Code - turns sounds on and off
+    // Sounds off
+    volumeOff() {
+        this.bgMusic.volume = 0;
+        this.victorySound.volume = 0;
+        this.gameOverSound.volume = 0;
+    }
+    fxOff() {
+        this.flipSound.volume = 0;
+        this.matchSound.volume = 0;
+    }
+    // Sounds on
+    volumeOn() {
+        this.bgMusic.volume = 0.4;
+        this.victorySound.volume = 1;
+        this.gameOverSound.volume = 1;
+    }
+    fxOn() {
+        this.flipSound.volume = 1;
+        this.matchSound.volume = 1;
     }
 }
 
@@ -141,6 +160,7 @@ class MixOrMatch {
     canFlipCard(card) {
         return !this.busy && !this.matchedCards.includes(card) && card !== this.cardToCheck;
     }
+
 }
 
 if (document.readyState == 'loading') {
@@ -166,4 +186,50 @@ function ready() {
             game.flipCard(card);
         });
     });
+}
+
+$(document).ready(function () {
+     $('#volSwitch').change(function () {
+         if (!this.checked)
+             volDisabled(this);
+         else if (this.checked)
+             volEnabled(this);
+     });
+ });
+
+ $(document).ready(function () {
+     $('#fxSwitch').change(function () {
+         if (!this.checked)
+             fxDisabled(this);
+         else if (this.checked)
+             fxEnabled(this);
+     });
+ });
+
+ function volDisabled(ele) {
+     let volDisabledController = new AudioController();
+
+     volDisabledController.volumeOff();
+     console.log(' ID: ' + ele.id + ' just got unchecked! ');
+ }
+
+ function volEnabled(ele) {
+     let volEnabledController = new AudioController();
+
+     volEnabledController.volumeOn();
+     console.log(' ID: ' + ele.id + ' just got checked! ');
+ }
+
+function fxDisabled(ele) {
+    let fxDisabledController = new AudioController();
+
+    fxDisabledController.fxOff();
+    console.log(' ID: ' + ele.id + ' just got unchecked! ');
+}
+
+function fxEnabled(ele) {
+    let fxEnabledController = new AudioController();
+
+    fxEnabledController.fxOn();
+    console.log(' ID: ' + ele.id + ' just got checked! ');
 }
