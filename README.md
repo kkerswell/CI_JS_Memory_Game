@@ -2,6 +2,12 @@ https://codepen.io/erikterwan/pen/EVzeRP - hamburger menu
 
 https://www.fontspace.com/digits-font-f2006 - font
 
+https://seeklogo.com/vector-logo/319158/brain-shape - logo
+
+https://www.freepik.com/free-vector/head-profile-with-gears_4347647.htm?query=brain%20icon - logo
+
+https://seeklogo.com/vector-logo/319158/brain-shape - logo
+
 ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
 Welcome USER_NAME,
