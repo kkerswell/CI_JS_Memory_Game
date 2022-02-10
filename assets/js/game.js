@@ -34,28 +34,6 @@ class AudioController {
         this.stopMusic();
         this.gameOverSound.play();
     }
-
-    // Orignal Code - turns sounds on and off
-    // Sounds off
-    volumeOff() {
-        this.bgMusic.volume = 0;
-        this.victorySound.volume = 0;
-        this.gameOverSound.volume = 0;
-    }
-    fxOff() {
-        this.flipSound.volume = 0;
-        this.matchSound.volume = 0;
-    }
-    // Sounds on
-    volumeOn() {
-        this.bgMusic.volume = 0.4;
-        this.victorySound.volume = 1;
-        this.gameOverSound.volume = 1;
-    }
-    fxOn() {
-        this.flipSound.volume = 1;
-        this.matchSound.volume = 1;
-    }
 }
 
 class MixOrMatch {
@@ -84,6 +62,7 @@ class MixOrMatch {
         this.timer.innerText = this.timeRemaining;
         this.ticker.innerText = this.totalClicks;
     }
+
     startCountdown() {
         return setInterval(() => {
             this.timeRemaining--;
@@ -178,6 +157,8 @@ function ready() {
         overlay.addEventListener('click', () => {
             overlay.classList.remove('visible');
             game.startGame();
+            volMuteUnmute();
+            fxMuteUnmute();
         });
     });
 
@@ -188,48 +169,36 @@ function ready() {
     });
 }
 
-$(document).ready(function () {
-     $('#volSwitch').change(function () {
-         if (!this.checked)
-             volDisabled(this);
-         else if (this.checked)
-             volEnabled(this);
-     });
- });
+function volMuteUnmute() {
+    let volSwitch = document.getElementById('volSwitch');
+    let audioController = new AudioController();
 
- $(document).ready(function () {
-     $('#fxSwitch').change(function () {
-         if (!this.checked)
-             fxDisabled(this);
-         else if (this.checked)
-             fxEnabled(this);
-     });
- });
-
- function volDisabled(ele) {
-     let volDisabledController = new AudioController();
-
-     volDisabledController.volumeOff();
-     console.log(' ID: ' + ele.id + ' just got unchecked! ');
- }
-
- function volEnabled(ele) {
-     let volEnabledController = new AudioController();
-
-     volEnabledController.volumeOn();
-     console.log(' ID: ' + ele.id + ' just got checked! ');
- }
-
-function fxDisabled(ele) {
-    let fxDisabledController = new AudioController();
-
-    fxDisabledController.fxOff();
-    console.log(' ID: ' + ele.id + ' just got unchecked! ');
+    volSwitch.addEventListener('change', function() {
+        if (!this.checked) {
+            audioController.flipSound.muted = true;
+            audioController.flipSound.muted = true;
+            console.log("vol toggle off");
+        } else if (this.checked) {
+            audioController.flipSound.muted = false;
+            audioController.flipSound.muted = false;
+            console.log("vol toggle on");
+        }
+    });
 }
 
-function fxEnabled(ele) {
-    let fxEnabledController = new AudioController();
+function fxMuteUnmute() {
+    let fxSwitch = document.getElementById('fxSwitch');
+    let audioController = new AudioController();
 
-    fxEnabledController.fxOn();
-    console.log(' ID: ' + ele.id + ' just got checked! ');
+    fxSwitch.addEventListener('change', function() {
+        if (!this.checked) {
+            audioController.flipSound.muted = true;
+            audioController.flipSound.muted = true;
+            console.log("fx toggle off");
+        } else if (this.checked) {
+            audioController.flipSound.muted = false;
+            audioController.flipSound.muted = false;
+            console.log("fx toggle on");
+        }
+    });
 }
