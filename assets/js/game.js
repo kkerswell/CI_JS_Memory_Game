@@ -32,16 +32,19 @@ class AudioController {
 }
 
 class MixOrMatch {
-    constructor(totalTime, cards) {
+    constructor(cards) {
+        let totalTime;
+        let level;
         this.cardsArray = cards;
-        this.totalTime = totalTime;
+        this.currentlevel = level;
         this.timeRemaining = totalTime;
         this.timer = document.getElementById('time-remaining')
         this.ticker = document.getElementById('flips');
         this.audioController = new AudioController();
     }
-
-    startGame() {
+    levelOne() {
+        this.level = 1;
+        this.totalTime = 100;
         this.totalClicks = 0;
         this.timeRemaining = this.totalTime;
         this.cardToCheck = null;
@@ -57,7 +60,41 @@ class MixOrMatch {
         this.timer.innerText = this.timeRemaining;
         this.ticker.innerText = this.totalClicks;
     }
-
+    // Original Code Start - Created to allow the user to progress through levels
+    levelTwo() {
+        this.level = 2;
+        this.totalTime = 70;
+        this.timeRemaining = this.totalTime;
+        this.cardToCheck = null;
+        this.matchedCards = [];
+        this.busy = true;
+        setTimeout(() => {
+            this.audioController.startMusic();
+            this.shuffleCards(this.cardsArray);
+            this.countdown = this.startCountdown();
+            this.busy = false;
+        }, 500)
+        this.hideCards();
+        this.timer.innerText = this.timeRemaining;
+        this.ticker.innerText = this.totalClicks;
+    }
+    levelThree() {
+        this.level = 3;
+        this.totalTime = 45;
+        this.timeRemaining = this.totalTime;
+        this.cardToCheck = null;
+        this.matchedCards = [];
+        this.busy = true;
+        setTimeout(() => {
+            this.audioController.startMusic();
+            this.shuffleCards(this.cardsArray);
+            this.countdown = this.startCountdown();
+            this.busy = false;
+        }, 500)
+        this.hideCards();
+        this.timer.innerText = this.timeRemaining;
+        this.ticker.innerText = this.totalClicks;
+    } // Original Code End
     startCountdown() {
         return setInterval(() => {
             this.timeRemaining--;
@@ -66,15 +103,28 @@ class MixOrMatch {
                 this.gameOver();
         }, 1000);
     }
-    gameOver() {
+    // Original Code Start - Created to allow the user to progress through levels
+    victoryLevelOne() {
         clearInterval(this.countdown);
-        this.audioController.gameOver();
-        document.getElementById('game-over-text').classList.add('visible');
+        this.audioController.victory();
+        document.getElementById('level-one-victory-text').classList.add('visible');
+        victoryLevelOneOverlay.addEventListener('click', this.levelTwo());                
     }
+    victoryLevelTwo() {
+        clearInterval(this.countdown);
+        this.audioController.victory();
+        document.getElementById('level-two-victory-text').classList.add('visible');
+        victoryLevelOneOverlay.addEventListener('click', this.victory());
+    } // Original Code End
     victory() {
         clearInterval(this.countdown);
         this.audioController.victory();
         document.getElementById('victory-text').classList.add('visible');
+    }
+    gameOver() {
+        clearInterval(this.countdown);
+        this.audioController.gameOver();
+        document.getElementById('game-over-text').classList.add('visible');
     }
     hideCards() {
         this.cardsArray.forEach(card => {
@@ -110,7 +160,11 @@ class MixOrMatch {
         card1.classList.add('matched');
         card2.classList.add('matched');
         this.audioController.match();
-        if(this.matchedCards.length === this.cardsArray.length)
+        if(this.matchedCards.length === this.cardsArray.length && this.level === 1)
+            this.victoryLevelOne();
+        if(this.matchedCards.length === this.cardsArray.length && this.level === 2)
+            this.victoryLevelTwo();
+        if(this.matchedCards.length === this.cardsArray.length && this.level === 3)
             this.victory();
     }
     cardMismatch(card1, card2) {
@@ -121,12 +175,12 @@ class MixOrMatch {
             this.busy = false;
         }, 1000);
     }
-    shuffleCards(cardsArray) { // Fisher-Yates Shuffle Algorithm.
-        for (let i = cardsArray.length - 1; i > 0; i--) {
-            let randIndex = Math.floor(Math.random() * (i + 1));
-            cardsArray[randIndex].style.order = i;
-            cardsArray[i].style.order = randIndex;
-        }
+    shuffleCards(cardsArray) { // Fisher-Yates Shuffle Algorithm
+        // for (let i = cardsArray.length - 1; i > 0; i--) {
+        //     let randIndex = Math.floor(Math.random() * (i + 1));
+        //     cardsArray[randIndex].style.order = i;
+        //     cardsArray[i].style.order = randIndex;
+        // }
     }
     getCardType(card) {
         return card.getElementsByClassName('card-value')[0].src;
@@ -144,26 +198,56 @@ if (document.readyState == 'loading') {
 }
 
 function ready() {
-    let overlays = Array.from(document.getElementsByClassName('overlay-text'));
     let cards = Array.from(document.getElementsByClassName('card'));
-    let game = new MixOrMatch(100, cards);
-
-    overlays.forEach(overlay => {
-        overlay.addEventListener('click', () => {
-            overlay.classList.remove('visible');
-            game.startGame();
-            volMuteUnmute(game);
-            fxMuteUnmute(game);
-        });
-    });
+    let game = new MixOrMatch(cards);
 
     cards.forEach(card => {
         card.addEventListener('click', () => {
-            game.flipCard(card);
+            game.flipCard(card);          
         });
+    });
+
+    // Original Code - Created to allow the user to progress through levels
+
+    let newGameOverlay = document.getElementById('new-game-text');
+    let victoryLevelOneOverlay = document.getElementById('level-one-victory-text');
+    let victoryLevelTwoOverlay = document.getElementById('level-two-victory-text');
+    let victoryGameOverlay = document.getElementById('victory-text');
+    let gameOverOverlay = document.getElementById('game-over-text');
+
+    newGameOverlay.addEventListener('click', () => {
+        newGameOverlay.classList.remove('visible');
+        game.levelOne();
+        volMuteUnmute(game);
+        fxMuteUnmute(game);
+    });
+    victoryGameOverlay.addEventListener('click', () => {
+        victoryGameOverlay.classList.remove('visible');
+        game.levelOne();
+        volMuteUnmute(game);
+        fxMuteUnmute(game);
+    });
+    gameOverOverlay.addEventListener('click', () => {
+        gameOverOverlay.classList.remove('visible');
+        game.levelOne();
+        volMuteUnmute(game);
+        fxMuteUnmute(game);
+    });
+    victoryLevelOneOverlay.addEventListener('click', () => {
+        victoryLevelOneOverlay.classList.remove('visible');
+        game.levelTwo();
+        volMuteUnmute(game);
+        fxMuteUnmute(game);
+    });
+    victoryLevelTwoOverlay.addEventListener('click', () => {
+        victoryLevelTwoOverlay.classList.remove('visible');
+        game.levelThree();
+        volMuteUnmute(game);
+        fxMuteUnmute(game);
     });
 }
 
+// Original Code - Will allow the user to mute and unmute game music
 function volMuteUnmute(currentGame) {
     let volSwitch = document.getElementById('volSwitch');
 
@@ -180,6 +264,7 @@ function volMuteUnmute(currentGame) {
     });
 }
 
+// Original Code - Will allow the user to mute and unmute game sound effects
 function fxMuteUnmute(currentGame) {
     let fxSwitch = document.getElementById('fxSwitch');
 
