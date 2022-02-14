@@ -8,300 +8,159 @@
     --color-four: #4da100; /* RGB value (77,161,0) */
     --color-five: #f4f7f5; /* RGB value (244,247,245) */
     --color-six: #24343f; /* RGB value (244,247,245) */
-    
-}
-
-* {
-    margin: 0;
-    padding: 0;
+    --margin: 1em;
 }
 
 body {
     background: linear-gradient(#ff7f00, #00819f, #d9005f, #4da100);
     user-select: none !important;
     font-family: 'Montserrat Alternates', sans-serif;
-    width: 100vw;
 }
 
 p, h1, h2, h3, h4, h5, a {
     color: var(--color-five);
 }
 
-body a:hover {
-    border-bottom: solid 1px var(--color-six);
-    color: var(--color-six);
+/* cmt adds custom value to bootstrap mt (margin-top) class */
+
+.cmt-1 {
+    margin-top: calc(var(--margin) * 5) !important;
 }
 
-/* #menu li:hover {
-    border-bottom: solid 1px var(--color-six);
-    color: var(--color-six);
-}  */
+.cmt-2 {
+    margin-top: calc(var(--margin) * 10) !important;
+}
+
+.cmt-3 {
+    margin-top: calc(var(--margin) * 15) !important;
+}
+
+.cmt-4 {
+    margin-top: calc(var(--margin) * 20) !important;
+}
+
+.cmt-5 {
+    margin-top: calc(var(--margin) * 25) !important;
+}
 
 /************************************ Base Styling End */
 
 
 /**************************************** Header Start */
 
-/**** Full Nav Bar ****/
-
 header {
-    position: sticky;
+    position: sticky !important;
+    position: -webkit-sticky !important;
+    top: 1em;
+}
+
+/* Off-Canvas Menu */
+
+/* The side navigation menu */
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
     top: 0;
-    display: block;
-    height: 5em;
-    width: 100%;
-    z-index: 2;
-    -webkit-background-clip: padding-box; /* for Safari */
-    background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
-}
-
-.main_nav {
-    display: block;
-}
-
-/**** Hamburger Menu ****/
-
-/*
- * Made by Erik Terwan
- * 24th of November 2015
- * MIT License
- *
- * If you are thinking of using this in
- * production code, beware of the browser
- * prefixes.
- *
- * NOTE: All code below is made by the above unless otherwise stated with word 'Original'
- */
-
-#menuToggle {
-    display: block;
-    position: absolute;
-    top: 2em; /* Original: Changed from px to em  */
-    left: 2em; /* Original: Changed from px to em  */
-    z-index: 1;
-    -webkit-user-select: none;
-    user-select: none;
-}
-
-#menuToggle a {
-    text-decoration: none; 
-    transition: color 0.3s ease;
-}
+    left: 0;
+    background-color: #111; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  }
   
-#menuToggle input {
-    display: block;
-    width: 40px;
-    height: 32px;
-    position: absolute;
-    top: -7px;
-    left: -5px;
-    cursor: pointer;
-    opacity: 0; /* hide this */
-    z-index: 2; /* and place it over the hamburger */
-}
- 
-#menuToggle span {
-    display: block;
-    width: 33px;
-    height: 4px;
-    margin-bottom: 5px;
-    position: relative;   
-    background: var(--color-five); /* Original: Changed color  */
-    border-radius: 3px;   
-    z-index: 1;   
-    transform-origin: 4px 0px;   
-    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-               opacity 0.55s ease;
-}
-
-#menuToggle span:first-child {
-    transform-origin: 0% 0%;
-}
- 
-#menuToggle span:nth-last-child(2) {
-    transform-origin: 0% 100%;
-}
- 
-/* 
- * Transform all the slices of hamburger
- * into a crossmark.
- */
-#menuToggle input:checked ~ span {
-    opacity: 1;
-    transform: rotate(45deg) translate(-2px, -1px);
-    background: var(--color-six);
-}
- 
-/* Hide the middle slice */
-#menuToggle input:checked ~ span:nth-last-child(3) {
-    opacity: 0;
-    transform: rotate(0deg) scale(0.2, 0.2);
-}
- 
-/* Change direction */
-#menuToggle input:checked ~ span:nth-last-child(2) {
-    transform: rotate(-45deg) translate(0, -1px);
-}
-
-/*
-* Make this absolute positioned
-* at the top left of the screen
-*/
-#menu {
-    position: absolute;
-    /* Original: Changed from px to vw and to full width  */
-    width: 100vw;
-    margin: -100px 0 0 -50px;
-    padding: 50px;
-    padding-top: 125px;
-    /* 
-    * Original: Changed from standard color 
-    * to linear gradient to add opacity to remaining 
-    * view of page  
-    */
-    background: linear-gradient(to right,
-    #f4f7f5 20%, rgba(237, 237, 237, 0.9) 20% 100%);
-    list-style-type: none;
-    /* to stop flickering of text in safari */
-    -webkit-font-smoothing: antialiased;
-    transform-origin: 0% 0%;
-    transform: translate(-100%, 0);
-    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
-    min-height: 100vh; /* Original: added full page height  */    
-    overflow: hidden;
-}
-
-#menu li {
-    padding: 10px 0;
-    font-size: 22px;
-    width: 200px;
-    color: var(--color-six)
-}
- 
-/* Slide it in from the left */
-#menuToggle input:checked ~ ul {
-    transform: none;
-}
-
-/**** Links ****/
-
-.main_nav .head_links {
-    position: absolute;
-    right: 0;
-    padding-right: 3em;
-}
-
-.head_links {
-    top: 2em;
-}
-
-.head_links li {
-    list-style: none;
-    display: inline;
-    word-spacing: 3em;
-    padding-left: 3em;
-}
-
-.head_links a {
+  /* The navigation menu links */
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
     text-decoration: none;
-}
-
-.active {
-    background-color: red;
-}
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  /* Position and style the close button (top right corner) */
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+  #main {
+    transition: margin-left .5s;
+    padding: 20px;
+  }
+  
+  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
 
 /****************************************** Header End */
 
 /****************************************** Main Start */
 
 main {
-    margin: auto;
-    width: 90%;
     user-select: none !important;
 }
 
 /**** Main Start ****/
 
-.intro {
-    text-align: center;
-    width: 100%;
-    margin: auto;
-}
-
 #intro img {
     width: 15vw;
     height: auto;
-    padding-top: 5em;
-}
-
-.intro h1 {
-    font-size: calc(9em + 6 * ((100vw - 320px) / 680));
-    padding-top: 0.5em;
-    width: 100%;
-}
-
-.intro h2 {
-    font-size: calc(5em + 6 * ((100vw - 320px) / 680));
-    padding-top: 5em;
-}
-
-.intro h3 {
-    font-size: calc(1em + 6 * ((100vw - 320px) / 680));
-    padding-top: 3em;
 }
 
 /**** How To Play Start ****/
 
 .how_to_play {
-    width: 90%;
-    padding-top: 30em;
-    margin: auto;
+
 }
 
 .rule_list {
-    width: 50%;
-    float: left;
-    font-size: 4rem;
-    font-size: calc(1em + 6 * ((100vw - 320px) / 680));
+
 }
 
 .rule_list_title {
-    font-size: 5rem;
+
 }
 
 .rule_list_number {
     font-family: 'digitsregular', Arial, sans-serif;
-    margin-top: 5rem;
 }
 
 .rule_list_number:nth-of-type(2)::before {
     content: "A";
-    margin-right: 20px;
 }
 
 .rule_list_number:nth-of-type(3)::before {
     content: "b";
-    margin-right: 20px;
 }
 
 .rule_list_number:nth-of-type(4)::before {
     content: "C";
-    margin-right: 20px;
 }
 
 .rule_list_number:nth-of-type(5)::before {
     content: "d";
-    margin-right: 20px;
 }
 
 .rule_list_number:nth-of-type(6)::before {
     content: "E";
-    margin-right: 20px;
 }
 
 .rule_list_number:nth-of-type(7)::before {
     content: "f";
-    margin-right: 20px;
 }
 
 .rule_list_text {
@@ -309,18 +168,11 @@ main {
 }
 
 .rule_list_images {
-    width: 50%;
-    float: left;
-    margin: auto;
-    background: grey;
+
 }
 
 .rule_list_images img {
-    display: inline-block;
-    width: 20rem;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 2rem;
+
 }
 
 .rule_list_guide_icon {
@@ -337,6 +189,14 @@ aside {
 }
 
 /******************************************* Main End */
+
+/******************************************* Form End */
+
+label {
+    color: var(--color-five);
+}
+
+/******************************************* Form End */
 
 /*************************************** Footer Start */
 
