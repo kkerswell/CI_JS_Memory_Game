@@ -6,7 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/game.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="assets/fonts/digitsregular.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+    integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous" />
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" 
     crossorigin="anonymous"></script>
     <script src="assets/js/script.js"></script>
@@ -15,7 +18,7 @@
 </head>
 <body>
     
-    <header class="header">
+    <header>
     
         <nav class="main_nav">
 
@@ -41,8 +44,8 @@
                         <a href="#">
                             <li>Info</li>
                         </a>
-                        <a href="#">
-                            <li>Contact</li>
+                        <a href="#" class="material-icons">
+                            <li>email</li>
                         </a>
                     </ul>
                     
@@ -69,19 +72,22 @@
 
         <div id="intro" class="intro">
             <img src="assets/images/gear-head.png">
-            <h1 class="tag">Brain sTRAIN</h1>
-            <h3 class="tag">a free single player matching game</h3>
-            <h2 class="tag">Test Your Memory</h2>
-            <h2 class="tag">Improve Your Memory</h2>
-            <h2 class="tag">Beat Your Memory</h2>
+            <h1>Brain sTRAIN</h1>
+            <h3>a free single player matching game</h3>
+            <h2>Test Your Memory</h2>
+            <h2>Improve Your Memory</h2>
+            <h2>Beat Your Memory</h2>
         </div>
         
         <div id="howtoplay" class="how_to_play">
             <div class="rule_list">
-                <p class="rule_list_title">How to start a new game</p>
-                <p class="rule_list_number"><span class="rule_list_text">Enter your name</span></p>
-                <p class="rule_list_number"><span class="rule_list_text">Choose a difficulty</p>
-                <p class="rule_list_number"><span class="rule_list_text">Wait for the timer</span></p>
+                <p class="rule_list_title">How to play</p>
+                <p class="rule_list_number"><span class="rule_list_text">Click 'Start'</span></p>
+                <p class="rule_list_number"><span class="rule_list_text">Click a card to flip it over</span></p>
+                <p class="rule_list_number"><span class="rule_list_text">Find all matching pairs before the time runs out</p>
+                <p class="rule_list_number"><span class="rule_list_text">Each new level gets progressively harder with less time available to find all the pairs</span></p>
+                <p class="rule_list_number"><span class="rule_list_text">Currently, there are three levels to play through</span></p>
+                <p class="rule_list_number"><span class="rule_list_text">Use the toggles to mute background music or sound effects</p>
             </div>
             <div class="rule_list_images">
                 <img src="assets/images/placeholder_img.jpg" alt="">
@@ -89,20 +95,10 @@
                 <img src="assets/images/placeholder_img.jpg" alt="">
             </div>
 
-            <!-- <div class="rule_list_guide">
-                <div><p class="rule_list_guide_icon">P</p></div>
-                <div><p class="rule_list_guide_text">Guide 1</p></div>
-                <div><p class="rule_list_guide_icon">P</p></div>
-                <div><p class="rule_list_guide_text">Guide 2</p></div>
-                <div><p class="rule_list_guide_icon">P</p></div>
-                <div><p class="rule_list_guide_text">Guide 3</p></div>
-                <div><p class="rule_list_guide_icon">P</p></div>
-                <div><p class="rule_list_guide_text">Guide 4</p></div>
-                <div><p class="rule_list_guide_icon">P</p></div>
-                <div><p class="rule_list_guide_text">Guide 5</p></div>
-            </div> -->
         </div>
 
+    </main>
+    <aside>
         <div id="game" class="game" style="height: 1000px">
             <div id="new-game-text" class="overlay-text visible">
                 Click to Start
@@ -299,32 +295,43 @@
             <!-- Switch to toggle game sounds -->
             <div class="volume-container">
                 <div class="item1">Game Volume</div>
-                <div class="item2">Off</div>
+                <div class="item2 material-icons">volume_mute</div>
                 <div class="item3">
                     <label class="switch item3">
                         <input type="checkbox" id="volSwitch" checked>
                         <span class="slider round"></span>
                     </label>
                 </div>
-                <div class="item4">On</div>
+                <div class="item4 material-icons">volume_up</div>
                 <div class="item5">FX Volume</div>
-                <div class="item6">Off</div>
+                <div class="item6 material-icons">volume_mute</div>
                 <div class="item7">
                     <label class="switch item3">
                         <input type="checkbox" id="fxSwitch" checked>
                         <span class="slider round"></span>
                     </label>
                 </div>
-                <div class="item8">On</div>
+                <div class="item8 material-icons">volume_up</div>
             </div>
 
         </div>
 
-    </main>
+    </aside>
 
     <footer class="footer">
-        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos beatae consequuntur quo ipsa, inventore, odit a eum nesciunt magni necessitatibus nostrum dolorum vero deserunt quisquam veritatis fugit quia, exercitationem tempore harum? Harum cupiditate esse unde nemo quas, officia doloribus veniam dicta aliquam expedita nihil reprehenderit? Vel quidem voluptas praesentium earum.</div>
-        <a href='https://www.freepik.com/vectors/abstract'>Abstract vector created by macrovector_official - www.freepik.com</a>
+        <p>&copy; Copyright Brain sTRAIN 2022</p>
+        <ul>
+            <!-- These are examples used for showing possible functionality but do not lead to specific social media pages. -->
+            <li><a aria-label="Facebook" href="https://www.facebook.com" target="_blank">
+                    <i aria-hidden="true" class="fab fa-facebook"></i>
+                </a>
+            <li><a aria-label="Twitter" href="https://www.twitter.com" target="_blank">
+                    <i aria-hidden="true" class="fab fa-twitter"></i>
+                </a>
+            <li><a aria-label="Instagram" href="https://www.instagram.com" target="_blank">
+                    <i aria-hidden="true" class="fab fa-instagram"></i>
+                </a>
+        </ul>
     </footer>
 
 </body>

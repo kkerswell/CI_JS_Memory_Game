@@ -111,7 +111,7 @@
   position: absolute;
   height: inherit;
   width: 50%;
-  margin-left: 25%;
+  margin-left: 20%;
   border-radius: 5%;
 }
 
@@ -207,14 +207,12 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 
-/* IGNORE ABOVE */
-
 .volume-container {
   margin: 50px auto;
   display: grid;
-  grid-template-columns: 60% 10% 10% 10%;
+  grid-template-columns: 55% 10% 15% 10%;
   grid-gap: 10px;  
-  color: #f4f7f5;
+  color: var(--color-five);
   width: 450px;
 }
 
