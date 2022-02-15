@@ -86,7 +86,7 @@ main {
 
 /**** How To Play Start ****/
 
-.how_to_play {
+/* .how_to_play {
 
 }
 
@@ -96,7 +96,7 @@ main {
 
 .rule_list_title {
 
-}
+} */
 
 .rule_list_number {
     font-family: 'digitsregular', Arial, sans-serif;
@@ -130,13 +130,13 @@ main {
     font-family: initial;
 }
 
-.rule_list_images {
+/* .rule_list_images {
 
 }
 
 .rule_list_images img {
 
-}
+} */
 
 .rule_list_guide_icon {
     font-family: 'digitsregular', Arial, sans-serif;

@@ -10,7 +10,7 @@
 }
 
 .game-container {
-  margin: 0 auto;
+  margin: 50px auto;
   display: grid;
   grid-template-columns: repeat(4, auto);
   grid-gap: 10px;
@@ -110,7 +110,8 @@
   animation: overlay-grow 500ms forwards;
   position: absolute;
   height: inherit;
-  width: 100%;
+  width: 50%;
+  margin-left: 20%;
   border-radius: 5%;
 }
 
@@ -223,8 +224,4 @@ input:checked + .slider:before {
   text-align: left;
   margin-top: auto;
   margin-bottom: auto;
-}
-
-.modal-body {
-  padding: 0 !important;
 }
