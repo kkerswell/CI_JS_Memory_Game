@@ -244,3 +244,7 @@ footer p, footer ul a {
     opacity: 0;
     transition: 0.1s;
 }
+
+#SHR, #shr_canvas2 {
+    display: none !important;
+}
