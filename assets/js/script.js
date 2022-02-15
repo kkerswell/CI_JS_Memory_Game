@@ -8,10 +8,10 @@ $(window).scroll(function(){
     let anchors = $('main').find('[id="intro"],[id="howtoplay"],[id="game"]');
     
     for (let i = 0; i < anchors.length; i++){
-        if (scrollTop > $(anchors[i]).offset().top && scrollTop < $(anchors[i]).offset().top + $(anchors[i]).height()) {
-            $('.head_links li a[href="#' + $(anchors[i]).attr('id') + '"]').addClass('active');
+        if (scrollTop > $(anchors[i]).offset().top - 200 && scrollTop < $(anchors[i]).offset().top + $(anchors[i]).height() - 200) {
+            $('.nav li a[href="#' + $(anchors[i]).attr('id') + '"]').addClass('active');
         } else {
-            $('.head_links li a[href="#' + $(anchors[i]).attr('id') + '"]').removeClass('active');
+            $('.nav li a[href="#' + $(anchors[i]).attr('id') + '"]').removeClass('active');
         }
     }
 });
