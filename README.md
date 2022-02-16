@@ -8,6 +8,8 @@ https://www.freepik.com/free-vector/head-profile-with-gears_4347647.htm?query=br
 
 https://seeklogo.com/vector-logo/319158/brain-shape - logo
 
+https://code-boxx.com/simple-css-bounce-effect/#sec-extra - bounce
+
 ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
 Welcome Keith Kerswell,

@@ -278,3 +278,9 @@ function fxMuteUnmute(currentGame) {
         }
     });
 }
+
+// Original Code - Will stop the game if the modal is closed
+function stopGame() {
+    window.location.reload();
+    location.href='index.html#game';
+}

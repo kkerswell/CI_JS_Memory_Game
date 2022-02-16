@@ -2,12 +2,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates&display=swap');
 
 :root {
-    --color-one: #ff7f00; /* RGB value (217,0,95) */
-    --color-two: #00819f; /* RGB value (255,127,0) */
-    --color-three: #d9005f; /* RGB value (0,129,159) */
+    --color-one: #ff7f00; /* RGB value (255,127,0) */
+    --color-two: #00819f; /* RGB value (0,129,159) */
+    --color-three: #d9005f; /* RGB value (217,0,95) */
     --color-four: #4da100; /* RGB value (77,161,0) */
     --color-five: #f4f7f5; /* RGB value (244,247,245) */
-    --color-six: #24343f; /* RGB value (244,247,245) */
+    --color-six: #24343f; /* RGB value (36,52,63) */
     --margin: 1em;
 }
 
