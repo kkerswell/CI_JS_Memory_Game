@@ -15,6 +15,7 @@ body {
     background: linear-gradient(#ff7f00, #00819f, #d9005f, #4da100);
     user-select: none !important;
     font-family: 'Montserrat Alternates', sans-serif;
+    /* width: 100% !important; */
 }
 
 p, h1, h2, h3, h4, h5, a {
@@ -86,18 +87,6 @@ main {
 
 /**** How To Play Start ****/
 
-/* .how_to_play {
-
-}
-
-.rule_list {
-
-}
-
-.rule_list_title {
-
-} */
-
 .rule_list_number {
     font-family: 'digitsregular', Arial, sans-serif;
 }
@@ -130,26 +119,18 @@ main {
     font-family: initial;
 }
 
-/* .rule_list_images {
-
-}
-
-.rule_list_images img {
-
-} */
-
 .rule_list_guide_icon {
     font-family: 'digitsregular', Arial, sans-serif;
 }
 
 /**** Game Area Start ****/
 
-aside {
+/* aside {
     margin: auto;
     width: 90%;
     display: table;
     padding-top: 20rem;
-}
+} */
 
 /******************************************* Main End */
 
@@ -164,8 +145,6 @@ label {
 /*************************************** Footer Start */
 
 footer {
-    width: 100%;
-    display: inline-block;
     margin-top: 10rem;
 }
 
@@ -173,23 +152,19 @@ footer p {
     line-height: 5.5em;
     font-size: medium;
     font-weight: 600;
-    padding-left: 3em;
-    display: inline-block;
 }
 
 footer ul {
     list-style-type: none;
-    display: inline-flex;
-    float: right;
     line-height: 5.5em;
-    margin: 0;
-    padding-right: 3em;
+    display: flex;
+    justify-content: center;
 }
 
 footer ul a {
     text-decoration: none;
     font-size: x-large;
-    margin: 0 0 0 1em;
+    margin: 0 .5em 0 .5em;
 }
 
 footer p, footer ul a {
@@ -197,3 +172,32 @@ footer p, footer ul a {
 }
 
 /***************************************** Footer End */
+
+/* On screens that are 400px or less, set the top-nav to 100% width */
+@media screen and (max-width: 400px) {
+
+    .nav-link{
+        padding-left: 0.2em !important;
+        padding-right: 0.2em !important;        
+    }
+
+  }
+
+/* On screens that are 385px or less, set the top-nav to 100% width */
+@media screen and (max-width: 400px) {
+
+    body{
+        width: revert !important;
+        width: -webkit-fill-available !important;    
+    }
+
+  }
+
+/* On screens that are 1000px or less, set the contact-btn to 25% width */
+
+
+    .contact-btn {
+        width: 25% !important;  
+    }
+
+
