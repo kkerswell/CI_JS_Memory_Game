@@ -210,6 +210,10 @@ footer ul a {
     color: var(--color-five);
 }
 
+footer ul a:hover {
+    color: var(--color-six);
+}
+
 /***************************************** Footer End */
 
 /* On screens that are 400px or less, set the top-nav to 100% width */
@@ -319,3 +323,35 @@ footer ul a {
 }
 
 /*************************************************** Game Launch Button End */
+
+/*********************************************************** 404 Page Start */
+
+.error404_body {
+    background: unset;
+    background-color: white;
+}
+
+.error404_body main {
+    margin-top: 10vh;
+}
+
+.error404_img {
+    width: auto;
+    height: 50vh;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.error404_footer p, .error404_footer ul a {
+    color: var(--color-six);
+}
+
+.error404_footer ul a:hover {
+    color: #dca000;
+}
+
+.error404_footer {
+    margin-top: 10vh;
+}
+
+/************************************************************* 404 Page End */
