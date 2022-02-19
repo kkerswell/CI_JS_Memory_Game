@@ -107,14 +107,12 @@ class MixOrMatch {
     victoryLevelOne() {
         clearInterval(this.countdown);
         this.audioController.victory();
-        document.getElementById('level-one-victory-text').classList.add('visible');
-        victoryLevelOneOverlay.addEventListener('click', this.levelTwo());                
+        document.getElementById('level-one-victory-text').classList.add('visible');           
     }
     victoryLevelTwo() {
         clearInterval(this.countdown);
         this.audioController.victory();
         document.getElementById('level-two-victory-text').classList.add('visible');
-        victoryLevelOneOverlay.addEventListener('click', this.victory());
     } // Original Code End
     victory() {
         clearInterval(this.countdown);
@@ -176,11 +174,11 @@ class MixOrMatch {
         }, 1000);
     }
     shuffleCards(cardsArray) { // Fisher-Yates Shuffle Algorithm
-        // for (let i = cardsArray.length - 1; i > 0; i--) {
-        //     let randIndex = Math.floor(Math.random() * (i + 1));
-        //     cardsArray[randIndex].style.order = i;
-        //     cardsArray[i].style.order = randIndex;
-        // }
+        for (let i = cardsArray.length - 1; i > 0; i--) {
+            let randIndex = Math.floor(Math.random() * (i + 1));
+            cardsArray[randIndex].style.order = i;
+            cardsArray[i].style.order = randIndex;
+        }
     }
     getCardType(card) {
         return card.getElementsByClassName('card-value')[0].src;
@@ -279,7 +277,7 @@ function fxMuteUnmute(currentGame) {
     });
 }
 
-// Original Code - Will stop the game if the modal is closed
+// Original Code - Will stop the game if the modal is closed by reloading page
 function stopGame() {
     window.location.reload();
     location.href='index.html#game';

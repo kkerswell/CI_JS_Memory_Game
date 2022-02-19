@@ -1,17 +1,16 @@
-// function to add active class to nav link at top of page
-// Source code https://stackoverflow.com/a/26383047
-$(window).scroll(function(){
-    let scrollTop = $(document).scrollTop();
+// Original Code - Will get the height of the modal and set the height of the overlay to match
+$(window).on('shown.bs.modal', function(){
+    let modalHeight = document.getElementById("game-display").offsetHeight;
+    let ngOverlay = document.getElementById("new-game-text");
+    let goOverlay = document.getElementById("game-over-text");
+    let loOverlay = document.getElementById("level-one-victory-text");
+    let ltOverlay = document.getElementById("level-two-victory-text");
+    let vOverlay = document.getElementById("victory-text");
     
-    // Changed source code to use OR in the selector
-    // Source code https://stackoverflow.com/a/10687171
-    let elementsList = document.querySelectorAll("#intro, #howtoplay, #game, #contact");
-
-    for (let i = 0; i < elementsList.length; i++){
-        if (scrollTop > $(elementsList[i]).offset().top && scrollTop < $(elementsList[i]).offset().top + $(elementsList[i]).height()) {
-            $('#top-nav a[href="#' + $(elementsList[i]).attr('id') + '"]').addClass('active');
-        } else {
-            $('#top-nav a[href="#' + $(elementsList[i]).attr('id') + '"]').removeClass('active');
-        }
-    }
+    ngOverlay.setAttribute("style", "height: " + modalHeight + "px;");
+    goOverlay.setAttribute("style", "height: " + modalHeight + "px;");
+    loOverlay.setAttribute("style", "height: " + modalHeight + "px;");
+    ltOverlay.setAttribute("style", "height: " + modalHeight + "px;");
+    vOverlay.setAttribute("style", "height: " + modalHeight + "px;");
 });
+

@@ -2,13 +2,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates&display=swap');
 
 :root {
-    --color-one: #ff7f00; /* RGB value (255,127,0) */
-    --color-two: #00819f; /* RGB value (0,129,159) */
-    --color-three: #d9005f; /* RGB value (217,0,95) */
-    --color-four: #4da100; /* RGB value (77,161,0) */
-    --color-five: #f4f7f5; /* RGB value (244,247,245) */
-    --color-six: #24343f; /* RGB value (36,52,63) */
+    --color-one: #ff7f00;
+    /* RGB value (255,127,0) */
+    --color-two: #00819f;
+    /* RGB value (0,129,159) */
+    --color-three: #d9005f;
+    /* RGB value (217,0,95) */
+    --color-four: #4da100;
+    /* RGB value (77,161,0) */
+    --color-five: #f4f7f5;
+    /* RGB value (244,247,245) */
+    --color-six: #24343f;
+    /* RGB value (36,52,63) */
     --margin: 1em;
+    --card-width: 10%;
 }
 
 body {
@@ -18,7 +25,13 @@ body {
     /* width: 100% !important; */
 }
 
-p, h1, h2, h3, h4, h5, a {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+a {
     color: var(--color-five);
 }
 
@@ -44,30 +57,53 @@ p, h1, h2, h3, h4, h5, a {
     margin-top: calc(var(--margin) * 25) !important;
 }
 
+.cmt-6 {
+    margin-top: calc(var(--margin) * 30) !important;
+}
+
 /************************************ Base Styling End */
 
 
 /**************************************** Header Start */
 
 header {
-    position: sticky !important;
-    position: -webkit-sticky !important;
-    top: 1em;
+    background-color: var(--color-six);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 4em;
+    padding: 1em;
+    margin: 0;
+    z-index: 998;
 }
 
-/* Override Bootstrap Styling */
+#top-nav {
+    display: inline;
+    float: right;
+    margin: 0;
+}
 
-.nav-pills .nav-link {
+#top-nav a {
+    text-decoration: none;
     color: var(--color-five);
+    opacity: 1 !important;
+    position: relative;
+    font-size: 1.5vh;
+    margin-left: 1em;
 }
 
-.nav-pills .nav-link:hover {
-    color: var(--color-six);
+.nav-scrolled {
+    border-color: var(--color-five);
+    border-bottom-style: solid;
+    border-width: 3px;
 }
 
-.nav-pills .nav-link.active {
-    background-color: var(--color-six) !important;
-    color: var(--color-five) !important;
+#top-nav a:hover {
+    border-color: var(--color-five);
+    border-bottom-style: solid;
+    border-width: 3px;
+    color: var(--color-five);
 }
 
 /****************************************** Header End */
@@ -80,8 +116,8 @@ main {
 
 /**** Main Start ****/
 
-#intro img {
-    width: 15vw;
+.intro img {
+    width: 35vw;
     height: auto;
 }
 
@@ -115,6 +151,10 @@ main {
     content: "f";
 }
 
+.rule_list_number:nth-of-type(8)::before {
+    content: "G";
+}
+
 .rule_list_text {
     font-family: initial;
 }
@@ -123,14 +163,12 @@ main {
     font-family: 'digitsregular', Arial, sans-serif;
 }
 
-/**** Game Area Start ****/
-
-/* aside {
-    margin: auto;
-    width: 90%;
-    display: table;
-    padding-top: 20rem;
-} */
+.how_to_play img {
+    width: 75%;
+    height: auto;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
 
 /******************************************* Main End */
 
@@ -167,7 +205,8 @@ footer ul a {
     margin: 0 .5em 0 .5em;
 }
 
-footer p, footer ul a {
+footer p,
+footer ul a {
     color: var(--color-five);
 }
 
@@ -176,28 +215,107 @@ footer p, footer ul a {
 /* On screens that are 400px or less, set the top-nav to 100% width */
 @media screen and (max-width: 400px) {
 
-    .nav-link{
+    .nav-link {
         padding-left: 0.2em !important;
-        padding-right: 0.2em !important;        
+        padding-right: 0.2em !important;
     }
 
-  }
+}
 
 /* On screens that are 385px or less, set the top-nav to 100% width */
 @media screen and (max-width: 400px) {
 
-    body{
+    body {
         width: revert !important;
-        width: -webkit-fill-available !important;    
+        width: -webkit-fill-available !important;
     }
 
-  }
+}
 
 /* On screens that are 1000px or less, set the contact-btn to 25% width */
 
+.contact-btn {
+    width: 25% !important;
+}
 
-    .contact-btn {
-        width: 25% !important;  
+/************************************************* Game Launch Button Start */
+
+.btn-container {
+    max-width: 270px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-sub-container {
+    width: 100%;
+}
+
+.game-btn {
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%;
+    border-radius: 50%;
+    background-color: rgba(244, 247, 245, .5) !important;
+    border: none;
+    transition-duration: 0.4s;
+}
+
+@keyframes spring {
+    0% {
+        transform: scale(1) translateY(0);
     }
 
+    10% {
+        transform: scale(1.1, 0.6);
+    }
 
+    30% {
+        transform: scale(0.8, 1.1) translateY(-10px);
+    }
+
+    50% {
+        transform: scale(1) translateY(0);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.spring {
+    animation: spring 1s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+}
+
+.game-btn p {
+    display: block;
+    float: left;
+    width: 100%;
+    padding-top: 50%;
+    padding-bottom: 50%;
+    line-height: 1em;
+    margin-top: -0.5em;
+    text-align: center;
+    color: var(--color-six);
+    font-family: Verdana;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.game-btn:hover {
+    background-color: rgba(36, 52, 63, .5) !important;
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+.game-btn p:hover {
+    color: var(--color-five) !important;
+}
+
+.game-btn:active {
+    cursor: grabbing !important;
+    transform: translateY(1em);
+}
+
+/*************************************************** Game Launch Button End */

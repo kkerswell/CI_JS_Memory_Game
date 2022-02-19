@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,140 +15,110 @@
     <!-- EXTERNAL STYLING -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">    
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" 
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
         integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous" />
     <!-- INTERNAL SCRIPTS -->
     <script src="assets/js/script.js"></script>
     <script src="assets/js/game.js"></script>
-    <!-- BEGIN SHAREAHOLIC CODE -->
-    <link rel="preload" href="https://cdn.shareaholic.net/assets/pub/shareaholic.js" as="script" />
-    <meta name="shareaholic:site_id" content="5617ba882ff34c4b606907311dfbb6c2" />
-    <script data-cfasync="false" async src="https://cdn.shareaholic.net/assets/pub/shareaholic.js"></script>
-    <!-- END SHAREAHOLIC CODE -->
 
     <title>Brain sTRAIN</title>
 
 </head>
+
 <body>
 
-    <header class="container-sm">
-
-        <div class="row justify-content-end">
-
-            <nav class="col-auto">
-                <ul class="nav nav-pills">
-                    <li id="top-nav" class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#intro">Main</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#howtoplay">Instructions</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#game">Game</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </li>
-                </ul>
-            </nav>
-
-        </div>
-
+    <header>
+        <nav id="top-nav">
+            <a class="intro" href="#intro">Main</a>
+            <a class="howtoplay" href="#howtoplay">Instructions</a>
+            <a class="game" href="#game">Game</a>
+            <a class="contact" href="#contact">Contact</a>
+        </nav>
     </header>
 
     <main>
 
         <!-- Intro Text Start -->
-
-        <div id="intro" class="container">
-            <div class="row justify-content-center">
-                <div class="col-12 text-center cmt-1">
-                    <img src="assets/images/gear-head.png">
+        <div id="intro">
+            <div class="container intro cmt-2">
+                <div class="row justify-content-center">
+                    <div class="col-12 text-center">
+                        <img src="assets/images/gear-head.png">
+                    </div>
                 </div>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-12 text-center cmt-1">
-                    <p class="display-1">Brain sTRAIN</p>
+                <div class="row justify-content-center">
+                    <div class="col-12 text-center cmt-1">
+                        <p class="display-1">Brain sTRAIN</p>
+                    </div>
                 </div>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-12 text-center cmt-1">
-                    <p>a free single player matching game</p>
+                <div class="row justify-content-center">
+                    <div class="col-12 text-center cmt-1">
+                        <p>a free single player matching game</p>
+                    </div>
                 </div>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-12 text-center cmt-5">
-                    <p class="display-2">Test Your Memory</p>
+                <div class="row justify-content-center">
+                    <div class="col-12 text-center cmt-5">
+                        <p class="display-2">Test Your Memory</p>
+                    </div>
                 </div>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-12 text-center cmt-5">
-                    <p class="display-2">Improve Your Memory</p>
+                <div class="row justify-content-center">
+                    <div class="col-12 text-center cmt-5">
+                        <p class="display-2">Improve Your Memory</p>
+                    </div>
                 </div>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-12 text-center cmt-5">
-                    <p class="display-2">Beat Your Memory</p>
+                <div class="row justify-content-center">
+                    <div class="col-12 text-center cmt-5">
+                        <p class="display-2">Beat Your Memory</p>
+                    </div>
                 </div>
             </div>
         </div>
-
         <!-- Intro Text End -->
 
         <!-- Instructions Start -->
 
-        <div id="howtoplay" class="how_to_play container-md cmt-5">
+        <div id="howtoplay"></div>
+        <div class="how_to_play container-md cmt-5">
             <div class="row justify-content-between rule_list">
                 <div class="col-12 col-sm-12 col-lg-6 align-self-center justify-content-between">
                     <p class="col-12 display-3 rule_list_title">How to play</p>
-                    <p class="col-12 cmt-1 rule_list_number"><span class="rule_list_text h5 ms-3">Click 'Start'</span>
+                    <p class="col-12 cmt-1 rule_list_number"><span class="rule_list_text h5 ms-3">Click the 'Launch Game' button</span>
                     </p>
-                    <p class="col-12 cmt-1 rule_list_number"><span class="rule_list_text h5 ms-3">Click a card to flip
-                            it
-                            over</span></p>
-                    <p class="col-12 cmt-1 rule_list_number"><span class="rule_list_text h5 ms-3">Find all matching
-                            pairs
-                            before the time runs out</p>
-                    <p class="col-12 cmt-1 rule_list_number"><span class="rule_list_text h5 ms-3">Each new level gets
-                            progressively harder with less time available to find all the pairs</span></p>
-                    <p class="col-12 cmt-1 rule_list_number"><span class="rule_list_text h5 ms-3">Currently, there are
-                            three
-                            levels to play through</span></p>
-                    <p class="col-12 cmt-1 rule_list_number"><span class="rule_list_text h5 ms-3">Use the toggles to
-                            mute
-                            background music or sound effects</p>
+                    <p class="col-12 cmt-1 rule_list_number"><span class="rule_list_text h5 ms-3">Follow the on-screen instructions</span></p>
+                    <p class="col-12 cmt-1 rule_list_number"><span class="rule_list_text h5 ms-3">Click a card to flip it over</span></p>
+                    <p class="col-12 cmt-1 rule_list_number"><span class="rule_list_text h5 ms-3">Find all matching pairs before the time runs out</p>
+                    <p class="col-12 cmt-1 rule_list_number"><span class="rule_list_text h5 ms-3">Each new level gets progressively harder with less time available to find all the pairs</span></p>
+                    <p class="col-12 cmt-1 rule_list_number"><span class="rule_list_text h5 ms-3">Currently, there are three levels to play through</span></p>
+                    <p class="col-12 cmt-1 rule_list_number"><span class="rule_list_text h5 ms-3">Use the toggles to mute background music or sound effects</p>
                 </div>
-                <div class="col-6 align-self-center justify-content-between rule_list_images d-none d-lg-block">
-                    <img class="col-12" src="assets/images/placeholder_img.jpg" alt="">
-                    <img class="col-12" src="assets/images/placeholder_img.jpg" alt="">
-                    <img class="col-12" src="assets/images/placeholder_img.jpg" alt="">
+                <div class="col-6 align-self-center d-none d-lg-block">
+                    <img class="mx-auto d-block" src="assets/images/game_one.jpg" alt="game image">
                 </div>
             </div>
         </div>
 
         <!-- Instructions End -->
 
-    </main>
-
-    <!-- Button trigger modal -->
-    <div id="game" class="btn-container cmt-5">
-        <div class="btn-sub-container">
-            <button type="button" class="spring game-btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                <p>Launch Game!</p>
-            </button>
+        <!-- Button trigger modal -->
+        <div id="game"></div>
+        <div class="btn-container cmt-5">
+            <div class="btn-sub-container">
+                <button type="button" class="spring game-btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                    <p>Launch Game!</p>
+                </button>
+            </div>
         </div>
-    </div>
-
-    <section id="game-modal">
 
         <!-- Modal -->
         <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
             aria-labelledby="staticBackdropLabel" aria-hidden="true">
             <div class="modal-dialog modal-fullscreen">
-                <div class="modal-content">
+                <div class="modal-content" id="modal-body">
                     <div class="modal-body">
-                        <div class="game" style="height: 1000px">
+                        <div id="game-display" class="game">
+
+                            <!-- Overlay -->
                             <div id="new-game-text" class="overlay-text visible">
                                 Click to Start
                             </div>
@@ -168,16 +139,24 @@
                                 <span class="overlay-text-small">You've pass all levels</span>
                                 <span class="overlay-text-small">Click to Restart</span>
                             </div>
-                            <div class="game-container">
-                                <div class="game-info-container">
-                                    <div class="game-info">
-                                        Time <span id="time-remaining"></span>
-                                    </div>
-                                    <div class="game-info">
-                                        Flips <span id="flips">0</span>
-                                    </div>
+
+                            <!-- Main Game Area -->
+                            <!-- Game Score and Clicks -->
+                            <div class="game-info-container">
+                                <div class="game-info">
+                                    Time <span id="time-remaining">100</span>
+                                </div>
+                                <div class="game-info">
+                                    Flips <span id="flips">0</span>
                                 </div>
 
+                            </div>
+                            <div class="licence">
+                                <a href="https://www.vecteezy.com/free-vector/memory-game">Memory Game Vectors by
+                                    Vecteezy</a>
+                            </div>
+                            <!-- Game Cards -->
+                            <div class="game-container">
                                 <!-- Card Pair One -->
                                 <div class="card">
                                     <div class="card-back card-face">
@@ -185,9 +164,6 @@
                                     </div>
                                     <div class="card-front card-face">
                                         <img class="card-value" src="assets/images/circle-b-1.jpg">
-                                        <a href="https://www.vecteezy.com/free-vector/memory-game">Memory Game Vectors
-                                            by
-                                            Vecteezy</a>
                                     </div>
                                 </div>
                                 <div class="card">
@@ -196,12 +172,8 @@
                                     </div>
                                     <div class="card-front card-face">
                                         <img class="card-value" src="assets/images/circle-b-1.jpg">
-                                        <a href="https://www.vecteezy.com/free-vector/memory-game">Memory Game Vectors
-                                            by
-                                            Vecteezy</a>
                                     </div>
                                 </div>
-
                                 <!-- Card Pair Two -->
                                 <div class="card">
                                     <div class="card-back card-face">
@@ -209,9 +181,6 @@
                                     </div>
                                     <div class="card-front card-face">
                                         <img class="card-value" src="assets/images/circle-p-1.jpg">
-                                        <a href="https://www.vecteezy.com/free-vector/memory-game">Memory Game Vectors
-                                            by
-                                            Vecteezy</a>
                                     </div>
                                 </div>
                                 <div class="card">
@@ -220,12 +189,8 @@
                                     </div>
                                     <div class="card-front card-face">
                                         <img class="card-value" src="assets/images/circle-p-1.jpg">
-                                        <a href="https://www.vecteezy.com/free-vector/memory-game">Memory Game Vectors
-                                            by
-                                            Vecteezy</a>
                                     </div>
                                 </div>
-
                                 <!-- Card Pair Three -->
                                 <div class="card">
                                     <div class="card-back card-face">
@@ -233,9 +198,6 @@
                                     </div>
                                     <div class="card-front card-face">
                                         <img class="card-value" src="assets/images/circle-p-2.jpg">
-                                        <a href="https://www.vecteezy.com/free-vector/memory-game">Memory Game Vectors
-                                            by
-                                            Vecteezy</a>
                                     </div>
                                 </div>
                                 <div class="card">
@@ -244,12 +206,8 @@
                                     </div>
                                     <div class="card-front card-face">
                                         <img class="card-value" src="assets/images/circle-p-2.jpg">
-                                        <a href="https://www.vecteezy.com/free-vector/memory-game">Memory Game Vectors
-                                            by
-                                            Vecteezy</a>
                                     </div>
                                 </div>
-
                                 <!-- Card Pair Four -->
                                 <div class="card">
                                     <div class="card-back card-face">
@@ -257,9 +215,6 @@
                                     </div>
                                     <div class="card-front card-face">
                                         <img class="card-value" src="assets/images/square-p-1.jpg">
-                                        <a href="https://www.vecteezy.com/free-vector/memory-game">Memory Game Vectors
-                                            by
-                                            Vecteezy</a>
                                     </div>
                                 </div>
                                 <div class="card">
@@ -268,12 +223,8 @@
                                     </div>
                                     <div class="card-front card-face">
                                         <img class="card-value" src="assets/images/square-p-1.jpg">
-                                        <a href="https://www.vecteezy.com/free-vector/memory-game">Memory Game Vectors
-                                            by
-                                            Vecteezy</a>
                                     </div>
                                 </div>
-
                                 <!-- Card Pair Five -->
                                 <div class="card">
                                     <div class="card-back card-face">
@@ -281,9 +232,6 @@
                                     </div>
                                     <div class="card-front card-face">
                                         <img class="card-value" src="assets/images/square-y-2.jpg">
-                                        <a href="https://www.vecteezy.com/free-vector/memory-game">Memory Game Vectors
-                                            by
-                                            Vecteezy</a>
                                     </div>
                                 </div>
                                 <div class="card">
@@ -292,12 +240,8 @@
                                     </div>
                                     <div class="card-front card-face">
                                         <img class="card-value" src="assets/images/square-y-2.jpg">
-                                        <a href="https://www.vecteezy.com/free-vector/memory-game">Memory Game Vectors
-                                            by
-                                            Vecteezy</a>
                                     </div>
                                 </div>
-
                                 <!-- Card Pair Six -->
                                 <div class="card">
                                     <div class="card-back card-face">
@@ -305,9 +249,6 @@
                                     </div>
                                     <div class="card-front card-face">
                                         <img class="card-value" src="assets/images/triangle-b-2.jpg">
-                                        <a href="https://www.vecteezy.com/free-vector/memory-game">Memory Game Vectors
-                                            by
-                                            Vecteezy</a>
                                     </div>
                                 </div>
                                 <div class="card">
@@ -316,12 +257,8 @@
                                     </div>
                                     <div class="card-front card-face">
                                         <img class="card-value" src="assets/images/triangle-b-2.jpg">
-                                        <a href="https://www.vecteezy.com/free-vector/memory-game">Memory Game Vectors
-                                            by
-                                            Vecteezy</a>
                                     </div>
                                 </div>
-
                                 <!-- Card Pair Seven -->
                                 <div class="card">
                                     <div class="card-back card-face">
@@ -329,9 +266,6 @@
                                     </div>
                                     <div class="card-front card-face">
                                         <img class="card-value" src="assets/images/triangle-p-1.jpg">
-                                        <a href="https://www.vecteezy.com/free-vector/memory-game">Memory Game Vectors
-                                            by
-                                            Vecteezy</a>
                                     </div>
                                 </div>
                                 <div class="card">
@@ -340,12 +274,8 @@
                                     </div>
                                     <div class="card-front card-face">
                                         <img class="card-value" src="assets/images/triangle-p-1.jpg">
-                                        <a href="https://www.vecteezy.com/free-vector/memory-game">Memory Game Vectors
-                                            by
-                                            Vecteezy</a>
                                     </div>
                                 </div>
-
                                 <!-- Card Pair Eight -->
                                 <div class="card">
                                     <div class="card-back card-face">
@@ -353,9 +283,6 @@
                                     </div>
                                     <div class="card-front card-face">
                                         <img class="card-value" src="assets/images/triangle-y-1.jpg">
-                                        <a href="https://www.vecteezy.com/free-vector/memory-game">Memory Game Vectors
-                                            by
-                                            Vecteezy</a>
                                     </div>
                                 </div>
                                 <div class="card">
@@ -364,56 +291,47 @@
                                     </div>
                                     <div class="card-front card-face">
                                         <img class="card-value" src="assets/images/triangle-y-1.jpg">
-                                        <a href="https://www.vecteezy.com/free-vector/memory-game">Memory Game Vectors
-                                            by
-                                            Vecteezy</a>
                                     </div>
                                 </div>
-
                             </div>
 
                             <!-- Switch to toggle game sounds -->
                             <div class="volume-container">
                                 <div class="item1">Game Volume</div>
-                                <div class="item2 material-icons">volume_mute</div>
-                                <div class="item3">
-                                    <label class="switch item3">
-                                        <input type="checkbox" id="volSwitch" checked>
-                                        <span class="slider round"></span>
+                                <div class="item2">
+                                    <span class="material-icons">volume_mute</span>
+                                    <input id="volSwitch" type="checkbox" hidden checked>
+                                    <label for="volSwitch" class="volSwitch">
                                     </label>
+                                    <span class="material-icons">volume_up</span>
                                 </div>
-                                <div class="item4 material-icons">volume_up</div>
-                                <div class="item5">FX Volume</div>
-                                <div class="item6 material-icons">volume_mute</div>
-                                <div class="item7">
-                                    <label class="switch item3">
-                                        <input type="checkbox" id="fxSwitch" checked>
-                                        <span class="slider round"></span>
+                                <div class="item3">FX Volume</div>
+                                <div class="item4">
+                                    <span class="material-icons">volume_mute</span>
+                                    <input id="fxSwitch" type="checkbox" hidden checked>
+                                    <label for="fxSwitch" class="fxSwitch">
                                     </label>
-                                </div>
-                                <div class="item8 material-icons">volume_up</div>
-                            </div>
-                        </div>
-
-                        <div class="container-fluid cmt-1">
-                            <div class="row justify-content-center">
-                                <div class="shareaholic-canvas col-6 align-items-center" data-app="share_buttons"
-                                    data-app-id="33017713">
+                                    <span class="material-icons">volume_up</span>
                                 </div>
                             </div>
                         </div>
                     </div>
+
                     <div class="modal-footer">
-                        <button type="button" id="modal-close" class="btn btn-secondary" data-bs-dismiss="modal" 
+                        <button type="button" id="modal-close" class="btn btn-secondary" data-bs-dismiss="modal"
                             onClick="stopGame()">Close</button>
                     </div>
+
                 </div>
             </div>
         </div>
-    </section>
 
-    <section id="contact">
-        <form id="contactForm" class="container cmt-5">
+    </main>
+
+    <div id="contact"></div>
+    <section class="cmt-6">
+
+        <form id="contactForm" class="container">
 
             <div class="row mb-4 align-items-center justify-content-center">
                 <label for="name" class="col-sm-2 col-form-label col-form-label-sm">Your name</label>
@@ -446,7 +364,7 @@
     <footer class="container">
         <div class="row align-items-center">
             <p class="text-center">&copy; Copyright Brain sTRAIN 2022</p>
-        </div>        
+        </div>
         <div class="row align-items-center">
             <ul>
                 <!-- These are examples used for showing possible functionality but do not lead to specific social media pages. -->
@@ -480,4 +398,5 @@
     </section>
 
 </body>
+
 </html>
