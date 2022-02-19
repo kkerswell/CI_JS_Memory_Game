@@ -329,6 +329,7 @@ footer ul a:hover {
 .error404_body {
     background: unset;
     background-color: white;
+    text-align: center;
 }
 
 .error404_body main {
@@ -340,6 +341,16 @@ footer ul a:hover {
     height: 50vh;
     margin-left: auto;
     margin-right: auto;
+}
+
+.error404_attribution {
+    text-decoration: none;
+    color: var(--color-six);
+    font-size: x-small;
+}
+
+.error404_attribution:hover {
+    color: #dca000;
 }
 
 .error404_footer p, .error404_footer ul a {
