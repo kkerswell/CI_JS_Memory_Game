@@ -10,6 +10,8 @@ https://seeklogo.com/vector-logo/319158/brain-shape - logo
 
 https://code-boxx.com/simple-css-bounce-effect/#sec-extra - bounce
 
+https://www.freepik.com/free-vector/oops-404-error-with-broken-robot-concept-illustration_13315300.htm - 404 image
+
 ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
 Welcome Keith Kerswell,

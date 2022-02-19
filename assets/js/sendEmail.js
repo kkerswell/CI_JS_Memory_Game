@@ -1,20 +1,21 @@
-const btn = document.getElementById('contactForm');
+const btn = document.getElementById('contact-btn');
+btn.innerHTML = 'Send Message';
 
 document.getElementById('contactForm')
     .addEventListener('submit', function (event) {
         event.preventDefault();
 
-        btn.value = 'Sending...';
+        btn.innerHTML = 'Sending...';
 
         const serviceID = 'service_h1fgdpq';
         const templateID = 'template_ms9blkp';
 
         emailjs.sendForm(serviceID, templateID, this)
             .then(() => {
-                btn.value = 'Send Email';
-                alert('Sent!');
+                btn.innerHTML = 'Message Sent!';
+                btn.disabled = true
             }, (err) => {
-                btn.value = 'Send Email';
-                alert(JSON.stringify(err));
+                btn.innerHTML = 'Error';
+                btn.disabled = true
             });
     });
