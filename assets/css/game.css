@@ -10,10 +10,6 @@
   padding: 0 !important;
 }
 
-.game-display {
-  height: 100%;
-}
-
 /* Body End */
 
 /* Overlay Start */
@@ -59,7 +55,7 @@
 .licence a {
   text-decoration: none;
   color: var(--color-five);
-  font-size: 1vw;
+  font-size: 1em;
 }
 
 /* Timer and Clicks Start */
@@ -67,7 +63,7 @@
 .game-info-container {
   display: flex;
   justify-content: space-between;
-  padding: 2em;
+  padding: 1em;
 }
 
 .game-info {
@@ -84,7 +80,7 @@
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(4, auto);
-  grid-gap: .5vw;
+  grid-gap: 1em;
   justify-content: center;
   perspective: 500px;
 }
@@ -198,6 +194,77 @@
   }
 }
 
+/* Card Media Queries */
+
+@media screen and (orientation: portrait) {
+  /* 
+    ##Device = Tablets, Ipads (portrait)
+    ##Screen = B/w 768px to 1024px
+  */
+
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .licence a {
+      font-size: 1em;
+    }
+
+    .card-face {
+      height: 10em;
+      width: 6em;
+    }
+
+    .game-container {
+      grid-gap: 3em;
+      height: 70%;
+    }
+  }
+}
+
+@media screen and (orientation: portrait) {
+  /* 
+    ##Device = Most of the Smartphones Mobiles (Portrait)
+    ##Screen = B/w 240px to 767px
+  */
+
+  @media (min-width: 240px) and (max-width: 767px) {
+    .licence a {
+      font-size: .5em;
+    }
+
+    .card-face {
+      height: 5em;
+      width: 3em;
+    }
+
+    .game-container {
+      grid-gap: 2em;
+      height: 70%;
+    }
+  }
+}
+
+/*****************************************************Landscape*/
+/* 
+  ##Device = galaxay fold landscape
+  ##Screen = B/w 653
+*/
+@media screen and (orientation: landscape) {
+  @media (min-width: 652px) and (max-width: 655px) {
+    .licence a {
+      font-size: 1em;
+    }
+  }
+
+  /* 
+    ##Device = Low Resolution Tablets, Mobiles (Landscape)
+    ##Screen = B/w 481px to 767px
+  */
+
+  @media (min-width: 481px) and (max-width: 767px) {
+    .licence a {
+      font-size: 1em;
+    }
+  }
+}
 /* Cards End */
 
 /* Game Volume Controls Start */
