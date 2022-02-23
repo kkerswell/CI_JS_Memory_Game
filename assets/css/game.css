@@ -24,6 +24,7 @@
   transition: background-color 500ms, font-size 500ms;
   font-size: 10vw !important;
   width: 100%;
+  height: inherit;
   position: fixed;
   cursor: pointer;
   padding: 0;
