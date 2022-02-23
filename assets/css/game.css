@@ -10,6 +10,10 @@
   padding: 0 !important;
 }
 
+.game-display {
+  height: 100%;
+}
+
 /* Body End */
 
 /* Overlay Start */
@@ -39,7 +43,11 @@
   display: block;
   animation: overlay-grow 500ms forwards;
   position: absolute; 
+}
 
+.overlay-text-words {
+  position: relative;
+  top: 25vh;
 }
 
 /* Overlay End */

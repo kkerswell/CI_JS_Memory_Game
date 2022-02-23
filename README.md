@@ -1,5 +1,3 @@
-https://codepen.io/erikterwan/pen/EVzeRP - hamburger menu
-
 https://www.fontspace.com/digits-font-f2006 - font
 
 https://seeklogo.com/vector-logo/319158/brain-shape - logo

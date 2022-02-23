@@ -174,11 +174,11 @@ class MixOrMatch {
         }, 1000);
     }
     shuffleCards(cardsArray) { // Fisher-Yates Shuffle Algorithm
-        for (let i = cardsArray.length - 1; i > 0; i--) {
-            let randIndex = Math.floor(Math.random() * (i + 1));
-            cardsArray[randIndex].style.order = i;
-            cardsArray[i].style.order = randIndex;
-        }
+        // for (let i = cardsArray.length - 1; i > 0; i--) {
+        //     let randIndex = Math.floor(Math.random() * (i + 1));
+        //     cardsArray[randIndex].style.order = i;
+        //     cardsArray[i].style.order = randIndex;
+        // }
     }
     getCardType(card) {
         return card.getElementsByClassName('card-value')[0].src;
