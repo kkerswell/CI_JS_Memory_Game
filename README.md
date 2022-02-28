@@ -322,45 +322,23 @@ https://wave.webaim.org/ was used to test accessibility.
 
 The results were as follows:
 
-#### index.html
-
 <details><summary>Picture</summary>
-<img src="docs/accessibility/accessibility-index.jpg">
+<img src="docs/accessibility/accessibility.jpg">
 </details><br>
 
-#### about.html
+Errors and rationale:
 
-<details><summary>Picture</summary>
-<img src="docs/accessibility/accessibility-about.jpg">
-</details><br>
+- 1 x No heading structure
+  - As the page is very simple, this structuring is not required.
 
-Whilst the above picture shows a contrast error, I was unable to locate this on the tool.
+- 6 x Possible heading
+  - Not required as adding these would not improve the document structure, outlines, and navigation.
 
-#### animals.html
+- 2 x Empty form label
+  - This has been identified on the checkboxes used for the volume control within the game. Therefore, an expected error.
 
-<details><summary>Picture</summary>
-<img src="docs/accessibility/accessibility-animals.jpg">
-</details><br>
-
-#### fundraising.html
-
-<details><summary>Picture</summary>
-<img src="docs/accessibility/accessibility-fundraising.jpg">
-</details><br>
-
-#### contactus.html
-
-<details><summary>Picture</summary>
-<img src="docs/accessibility/accessibility-contact.jpg">
-</details><br>
-
-The above test gave an error relating to contrast on the address section of the page.
-
-<details><summary>Picture</summary>
-<img src="docs/accessibility/accessibility-contact-contrast.jpg">
-</details><br>
-
-However, as can be seen in the above picture, the tool was incorrectly picking up that the background color and font color were the same.
+- 1 x Broken ARIA reference
+  - This has been picked up on the modal. It is not a concern as this is provided by Bootstrap.
 
 ### Performance
 
