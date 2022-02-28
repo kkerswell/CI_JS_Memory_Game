@@ -1,120 +1,607 @@
-https://www.fontspace.com/digits-font-f2006 - font
 
-https://seeklogo.com/vector-logo/319158/brain-shape - logo
 
-https://www.freepik.com/free-vector/head-profile-with-gears_4347647.htm?query=brain%20icon - logo
 
-https://seeklogo.com/vector-logo/319158/brain-shape - logo
 
 https://code-boxx.com/simple-css-bounce-effect/#sec-extra - bounce
 
-https://www.freepik.com/free-vector/oops-404-error-with-broken-robot-concept-illustration_13315300.htm - 404 image
 
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
-Welcome Keith Kerswell,
+# **<center>Brain sTRAIN</center>**
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+Developer: Keith Kerswell
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+![Responsive Pictures of site](/docs/site.png)
 
-## Gitpod Reminders
+[Live webpage](https://kkerswell.github.io/CI_JS_Memory_Game/)
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+## Table of Contents
 
-`python3 -m http.server`
+1. [Project Goals](#project-goals)
+    1. [User Goals](#user-goals)
+    2. [Site Owner Goals](#site-owner-goals)
+2. [User Experience](#user-experience)
+    1. [Target Audience](#target-audience)
+    2. [User Requrements and Expectations](#user-requrements-and-expectations)
+    3. [User Stories](#user-stories)
+3. [Design](#Design)
+    1. [Design Choices](#design-choices)
+    2. [Colour Scheme](#colour-scheme)
+    3. [Fonts](#fonts)
+    4. [Images and Video](#images-and-video)
+    5. [Structure](#structure)
+    6. [Wireframes](#wireframes)
+4. [Technologies Used](#technologies-used)
+    1. [Languages](#languages)
+    2. [Frameworks & Tools](#frameworks--tools)
+5. [Features](#features)
+    1. [Logo and Navigation Bar](#logo-and-navigation-bar)
+    2. [Footer](#footer)
+    3. [Homepage](#homepage)
+    4. [About Us](#about-us)
+    5. [Our Animals](#our-animals)
+    6. [Fundraising](#fundraising)
+    7. [Contact Form](#contact-form)
+    8. [Map and address](#map-and-address)
+6. [Development](#development)
+    1. [Building and Maintaining](#building-and-maintaining)
+    2. [Commits](#commits)
+    3. [Deployment](#deployment)
+    4. [Cloning](#cloning)
+7. [Testing](#testing)
+    1. [HTML Validation](#html-validation)
+    2. [CSS Validation](#css-validation)
+    3. [Accessibility](#accessibility)
+    4. [Performance](#performance)
+    5. [Responsiveness](#responsiveness)
+    6. [Browser compatibility](#browser-compatability)
+    7. [Testing user stories](#testing-user-stories)
+8. [Bugs](#Bugs)
+9. [Credits](#credits)
+10. [Acknowledgements](#acknowledgements)
 
-A blue button should appear to click: _Make Public_,
+## Project Goals 
 
-Another blue button should appear to click: _Open Browser_.
+### User Goals
+- Play a fun matching game
+- Practice and improve memory
+- Contact the site owner
+- Find the site owner's social media
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+### Site Owner Goals
+- Attract people who want to play a matching game
+- Attract people who want to improve their memory
+- Have a way for people to contact us
+- Have links to our social media pages
 
-A blue button should appear to click: _Make Public_,
+## User Experience
 
-Another blue button should appear to click: _Open Browser_.
+### Target Audience
+- People looking to play a game
+- People looking to train their memory
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+### User Requrements and Expectations
 
-To log into the Heroku toolbelt CLI:
+- A simple and intuitive navigation system
+- Quickly and easily find relevant information
+- Links and functions that work as expected
+- Good presentation and a visually appealing design regardless of screen size
+- An easy way to contact the site owner
+- Simple layout with the focus being on the game
+- Accessibility
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+### User Stories
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+#### First-time User 
+1. As a first time user, I want to be able to locate the game easily
+2. As a first time user, I want to be able to navigate the site easily
+3. As a first time user, I want to be able to contact the site owner
+4. As a first time user, I want to know about more about the site owner
 
-------
+#### Returning User
+5. As a returning user, I want to be able to locate the game easily
+6. As a returning user, I want to be able to navigate the site easily
+7. As a returning user, I want to be able to contact the site owner
+8. As a returning user, I want to know about more about the site owner
 
-## Release History
+#### Site Owner 
+9. As the site owner, I want users to be able to locate the game easily
+10. As the site owner, I want users to be able to navigate the site easily
+11. As the site owner, I want users to be able to contact us
+12. As the site owner, I want the users to be able to know about more about us
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+## Design
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+### Design Choices
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+The webpage was designed with to be exciting and vibrant to set the users expectation for a fun game. There is not a large amount of content on the page as the focus is on the game itself. Due to this, the site was going to be on one page but with sections that the user can navigate through easily.
+   
+### Colour Scheme
+- Create a fun and vibrant colour scheme
+- The site will use six colours but four of these make up the background of the page.
+- Final palette colours that were chosen were #ff7f00, #00819f, #d9005f, #4da100, #f4f7f5 and #24343f.
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+### Fonts
+- Create a fun look with soft lines
+- Final font chosen was Montserrat Alternates by Google Fonts
+- Source: https://fonts.google.com/specimen/Montserrat+Alternates?query=Montserrat+Alternates
+- Additional font used to get the numbering effect in the 'Instructions' section.
+- Source: https://www.fontspace.com/digits-font-f2006
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+### Images and Video
+- For the project, royalty free imagry is required
+- Image sources
+  - Main Logo - https://www.freepik.com/free-vector/head-profile-with-gears_4347647.htm?query=brain%20icon
+  - Back of Card Icons: https://seeklogo.com/vector-logo/319158/brain-shape
+  - Front of Card Icons: https://www.vecteezy.com/vector-art/4213194-matching-pairs-geometry-game-memory-training-circle-triangle-square-tile-on-pink-teal-yellow-white-background
+  - 404 Error - https://www.freepik.com/free-vector/oops-404-error-with-broken-robot-concept-illustration_13315300.htm
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+### Structure
+The page is structured in a well know, recognisable, user friendly, and easy to learn way. 
+    
+Upon arriving to the website the user sees a familiar type of navigation bar and footer bar. 
+    
+The website consists of one page with four sections plus an additional full-screen modal for the game: 
+- A main area consisting of the site logo, name and catchphrases.
+- An instructions area where the users learn how to play the game.
+- A game section which has a button to launch the game in a new modal.
+- A contact section with a contact form.
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+## Wireframes
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+<details><summary>Main Site (One Page Layout)</summary>
+<img src="docs/wireframes/page-wireframe.png">
+</details>
+<details><summary>Game Area Modal (Full Screen)</summary>
+<img src="docs/wireframes/modal-wireframe.png">
+</details>
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+## Technologies Used
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+### Languages
+- HTML
+- CSS
+- Javascript
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+### Frameworks & Tools
+- Git
+- GitHub
+- Gitpod
+- Balsamiq
+- Google Fonts
+- Font Awsome
+- TinyPNG<span>.</span>com
+- Favicon<span>.</span>io
+- JQuery
+- Bootstrap
+- EmailJS
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+## Features
+The page consists of one page with a full-screen modal and seven features
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+### Navigation Bar
+- Sticky feature, so it always remains at the top of the page.
+- The navbar is fully responsive and includes links to the Main, Instructions, Game and Contact sections.
+- It allows users to easily navigate the page
+- User stories covered: 3, 11
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+![Navbar](docs/features/feature-navbar.jpg)
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+### Main area
+- This area shows a hero image and striking text to give an impactful first impression to the site
+- Fully responsive
+- User stories covered: 3, 11
 
-------
+![Main One](docs/features/feature-main-one.jpg)
+![Main Two](docs/features/feature-main-two.jpg)
+![Main Three](docs/features/feature-main-three.jpg)
 
-## FAQ about the uptime script
+### Instructions
+- Gives easy to follow instructions
+- Fully responsive and changes layout and removes picture on smaller screens
+- User stories covered: 3, 11
 
-**Why have you added this script?**
+![Instructions](docs/features/feature-instructions.jpg)
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+### Game Button
+- Large animated button to draw attention to the user and show it can be interacted with
+- Fully responsive
+- User stories covered: 2, 6, 10
 
-**How will this affect me?**
+![Game Button](docs/features/feature-game-button.jpg)
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+### Game Modal
+- Displays the game in a full-page modal
+- Fully responsive
+- User stories covered: 4, 7, 9
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+![Game Modal](docs/features/feature-game-modal.jpg)
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+### Contact Form
+- A way for users to contact the site owner
+- Fully responsive
+- User stories covered: 5, 8, 12
 
-**So….?**
+![Contact Form](docs/features/feature-contact-form.jpg)
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+### Footer
+- Fully responsive
+- Consists of two seperate sections: Copyright information and social media links
+- User stories covered: 3, 11
 
-**Can I opt out?**
+![Footer](docs/features/feature-footer.jpg)
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+## Development 
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+### Building and Maintaining
 
-**Anything more?**
+GitHub was used as version control software to maintain, upload and share code with other developers.
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+GitPod was used to write the code.
 
----
+### Commits
 
-Happy coding!
+I kept track of updates by using commits in Git.  The terminal commands for these were:
+
+* git add .
+* git commit -m "Description of change"
+* git push
+
+### Deployment
+
+The website was deployed to GitHub Pages.
+
+To complete this action I completed the following process:
+
+1. Navigated to my site repository: https://github.com/kkerswell/CI_JS_Memory_Game
+2. Clicked on "Settings" within the top navigation area
+3. Clicked on "Pages" within the side navigation area
+4. Clicked the dropdown box under "Source" and choose "main"
+5. Clicked on the "Save" button
+6. Once saved, the url is then provided
+
+### Cloning
+
+1. Navigate to repo: https://github.com/kkerswell/CI_JS_Memory_Game
+2. Click on the 'Code' button
+3. Copy the repository url
+4. Navigate to your personal GitHub page
+5. Click on the 'Repositories' link at the top of the page
+6. Click on the 'New' button
+7. Click on 'Import a repository' at the top of the page
+8. Pase the repository url from above
+9. Name your new repository
+10. Click 'Begin Import'
+
+## Testing
+
+### HTML Validation
+
+https://validator.w3.org/ was used to validate HTML.
+
+#### index.html
+
+<details><summary>Picture</summary>
+<img src="docs/validation/index.png">
+</details><br>
+
+#### about.html
+
+<details><summary>Picture</summary>
+<img src="docs/validation/about.png">
+</details><br>
+
+#### animals.html
+
+<details><summary>Picture</summary>
+<img src="docs/validation/animals.png">
+</details><br>
+
+#### fundraising.html
+
+<details><summary>Picture</summary>
+<img src="docs/validation/fundraising.png">
+</details><br>
+
+#### contactus.html
+
+<details><summary>Picture</summary>
+<img src="docs/validation/contactus.png">
+</details><br>
+
+### CSS Validation
+
+https://jigsaw.w3.org/css-validator/ was used to validate CSS.
+
+<details><summary>Picture</summary>
+<img src="docs/validation/css.png">
+</details><br>
+
+### Accessibility
+
+https://wave.webaim.org/ was used to test accessibility.
+
+The results were as follows:
+
+#### index.html
+
+<details><summary>Picture</summary>
+<img src="docs/accessibility/accessibility-index.jpg">
+</details><br>
+
+#### about.html
+
+<details><summary>Picture</summary>
+<img src="docs/accessibility/accessibility-about.jpg">
+</details><br>
+
+Whilst the above picture shows a contrast error, I was unable to locate this on the tool.
+
+#### animals.html
+
+<details><summary>Picture</summary>
+<img src="docs/accessibility/accessibility-animals.jpg">
+</details><br>
+
+#### fundraising.html
+
+<details><summary>Picture</summary>
+<img src="docs/accessibility/accessibility-fundraising.jpg">
+</details><br>
+
+#### contactus.html
+
+<details><summary>Picture</summary>
+<img src="docs/accessibility/accessibility-contact.jpg">
+</details><br>
+
+The above test gave an error relating to contrast on the address section of the page.
+
+<details><summary>Picture</summary>
+<img src="docs/accessibility/accessibility-contact-contrast.jpg">
+</details><br>
+
+However, as can be seen in the above picture, the tool was incorrectly picking up that the background color and font color were the same.
+
+### Performance
+
+https://developers.google.com/web/tools/lighthouse was used to test performance.
+
+#### index.html
+
+<details><summary>Picture</summary>
+<img src="docs/performance/lh-index.jpg">
+</details><br>
+
+#### about.html
+
+<details><summary>Picture</summary>
+<img src="docs/performance/lh-about.jpg">
+</details><br>
+
+#### animals.html
+
+<details><summary>Picture</summary>
+<img src="docs/performance/lh-animals.jpg">
+</details><br>
+
+#### fundraising.html
+
+<details><summary>Picture</summary>
+<img src="docs/performance/lh-fundraising.jpg">
+</details><br>
+
+#### contactus.html
+
+<details><summary>Picture</summary>
+<img src="docs/performance/lh-contact.jpg">
+</details><br>
+
+### Responsiveness
+
+http://ami.responsivedesign.is was used to test responsiveness.
+
+#### index.html
+
+<details><summary>Picture</summary>
+<img src="docs/responsive/index-r.jpg">
+</details><br>
+
+#### about.html
+
+<details><summary>Picture</summary>
+<img src="docs/responsive/about-r.jpg">
+</details><br>
+
+#### animals.html
+
+<details><summary>Picture</summary>
+<img src="docs/responsive/animals-r.jpg">
+</details><br>
+
+#### fundraising.html
+
+<details><summary>Picture</summary>
+<img src="docs/responsive/fundraising-r.jpg">
+</details><br>
+
+#### contactus.html
+
+<details><summary>Picture</summary>
+<img src="docs/responsive/contactus-r.jpg">
+</details><br>
+
+### Browser compatibility
+
+The website was tested on the following browsers:
+
+- Google Chrome
+- Mozilla Firefox
+- Microsoft Egde
+
+### Testing user stories
+
+1. As a first time user, I want to know where the animal shelter is located
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Address | Navigate to the Contact Us page, locate the address | Locating address of the animal shelter | Works as expected |
+| Map | Navigate to the Contact Us page, locate the Google Map | Locating a map showing the location of the animal shelter | Works as expected |
+
+<details><summary>Screenshots</summary>
+<img src="docs/user-story-testing/location-ust-one.jpg">
+<img src="docs/user-story-testing/location-ust-two.jpg">
+</details><br>
+
+2. As a first time user, I want to know the animals available for adoption
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Our Animals | Navigate to the Our Animals page | See list of cats and dogs available for adoption | Works as expected |
+
+<details><summary>Screenshots</summary>
+<img src="docs/user-story-testing/animals-ust-one.jpg">
+<img src="docs/user-story-testing/animals-ust-two.jpg">
+</details><br>
+
+3. As a first time user, I want to know more about the animal shelter
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| About Us | Navigate to the About Us page | Find description of the animal shelter | Works as expected |
+
+<details><summary>Screenshots</summary>
+<img src="docs/user-story-testing/about-ust.jpg">
+</details><br>
+
+4. As a first time user, I want to know about any fundraising activities
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Upcoming Events | Navigate to the Fundraising page | Find a list of events with dates and descriptions | Works as expected |
+
+<details><summary>Screenshots</summary>
+<img src="docs/user-story-testing/fundraising-ust.jpg">
+</details><br>
+
+5. As a first time user, I want to be able to contact the animal shelter
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Contact Us | Navigate to the Contact Us page | Find the form | Works as expected |
+
+<details><summary>Screenshots</summary>
+<img src="docs/user-story-testing/contact-ust.jpg">
+</details><br>
+
+6. As a returning user, I want to know which animals are available for adoption
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Our Animals | Navigate to the Our Animals page | See list of cats and dogs available for adoption | Works as expected |
+
+<details><summary>Screenshots</summary>
+<img src="docs/user-story-testing/animals-ust-one.jpg">
+<img src="docs/user-story-testing/animals-ust-two.jpg">
+</details><br>
+
+7. As a returning user, I want to know about any fundraising activities
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Upcoming Events | Navigate to the Fundraising page | Find a list of events with dates and descriptions | Works as expected |
+
+<details><summary>Screenshots</summary>
+<img src="docs/user-story-testing/fundraising-ust.jpg">
+</details><br>
+
+8. As a returning user, I want to be able to contact the animal shelter
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Contact Us | Navigate to the Contact Us page | Find the form | Works as expected |
+
+<details><summary>Screenshots</summary>
+<img src="docs/user-story-testing/contact-ust.jpg">
+</details><br>
+
+9. As the site owner, I want users to find information about upcoming fundraising activities
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Upcoming Events | Navigate to the Fundraising page | Find a list of events with dates and descriptions | Works as expected |
+
+<details><summary>Screenshots</summary>
+<img src="docs/user-story-testing/fundraising-ust.jpg">
+</details><br>
+
+10. As the site owner, I want users to find information about available animals ready for adoption
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Our Animals | Navigate to the Our Animals page | See list of cats and dogs available for adoption | Works as expected |
+
+<details><summary>Screenshots</summary>
+<img src="docs/user-story-testing/animals-ust-one.jpg">
+<img src="docs/user-story-testing/animals-ust-two.jpg">
+</details><br>
+
+11. As the site owner, I want users to get to know the animal shelter
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| About Us | Navigate to the About Us page | Find description of the animal shelter | Works as expected |
+
+<details><summary>Screenshots</summary>
+<img src="docs/user-story-testing/about-ust.jpg">
+</details><br>
+
+12. As the site owner, I want the users to be able to contact us
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Contact Us | Navigate to the Contact Us page | Find the form | Works as expected |
+
+<details><summary>Screenshots</summary>
+<img src="docs/user-story-testing/contact-ust.jpg">
+</details><br>
+
+13. As the site owner, I want users to be able to see where we are located.
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Address | Navigate to the Contact Us page, locate the address | Locating address of the animal shelter | Works as expected |
+| Map | Navigate to the Contact Us page, locate the Google Map | Locating a map showing the location of the animal shelter | Works as expected |
+
+<details><summary>Screenshots</summary>
+<img src="docs/user-story-testing/location-ust-one.jpg">
+<img src="docs/user-story-testing/location-ust-two.jpg">
+</details><br>
+
+## Problems
+
+- spacing the a links in the nav bar.  I originally tried to add margin and padding but this was having an undesired effect.  I got arround this by adding line-height to the nav a section.
+- When Adding a h1 to the header, the alignment of both h1 and nav changed to an undesired style. I struggled to get the h1 to align left and the nav to align right.  I then changed both to display inline but the nav was then aligned right next to the h1 on the right side of the page, when I wanted it on the left. I overcame this by adding float right to the nav.
+- When hosting page on GitHub pages, the site did not work correctly.  I had to change all file paths to relative in order for this to work.
+- On the index page, I wanted a large full-scale image to cover the screen with a text overlay.  Whilst I managed to achieve this, I found I experienced issues when it came to responsive design. I attempted several fixes but ultimately I decided to change the design of the page to allow for easier coding and responsiveness.
+- When trying to style the images in the animal_hero div on the About Us page, I had an issue where the cat image was being pushed off the side of the page. I had to utilise Bootstrap in order to get the styling I wanted for this.
+
+## Credits
+
+Assets used have been credited in the code.  However, the following is a list of external sources that were utilised for this website.
+
+- https://commonmark.org/help/
+- https://colorhunt.co/
+- https://www.w3schools.com/css/css3_variables.asp
+- https://unsplash.com/
+- https://fontawesome.com/
+- https://fonts.google.com/
+- https://stackoverflow.com/
+- https://colorhunt.co/
+- https://favicon.io/emoji-favicons/dog-face
+
+## Acknowledgements
+
+I would like to take the opportunity to thank:
+
+- My mentor Mo Shami for his feedback, advice, guidance and support.
+- The  Code Institute Slack community for providing assistance and peer code reviews.
