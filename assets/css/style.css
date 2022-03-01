@@ -63,7 +63,6 @@ a {
 
 /************************************ Base Styling End */
 
-
 /**************************************** Header Start */
 
 header {
@@ -246,6 +245,14 @@ label {
 
 .contact-btn {
     width: 25% !important;
+}
+
+@media screen and (max-width: 575px) {
+
+    .contact-btn {
+        width: 50% !important;
+    }
+
 }
 
 /******************************************* Form End */
