@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
         integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous" />
     <!-- INTERNAL SCRIPTS -->
-    <script src="assets/js/script.js"></script>
+    <!-- <script src="assets/js/script.js"></script> -->
     <script src="assets/js/game.js"></script>
 
     <link rel="icon" type="image/x-icon" href="assets/images/favicon/favicon.ico">
@@ -48,7 +48,7 @@
             <div class="container intro cmt-2">
                 <div class="row justify-content-center">
                     <div class="col-12 text-center">
-                        <img src="assets/images/gear-head.png">
+                        <img src="assets/images/gear-head.png" alt="Head with gear cogs in brain area">
                     </div>
                 </div>
                 <div class="row justify-content-center">
@@ -95,16 +95,16 @@
                     <p class="col-12 cmt-1 rule_list_number"><span class="rule_list_text h5 ms-3">Click a card to flip
                             it over</span></p>
                     <p class="col-12 cmt-1 rule_list_number"><span class="rule_list_text h5 ms-3">Find all matching
-                            pairs before the time runs out</p>
+                            pairs before the time runs out</span></p>
                     <p class="col-12 cmt-1 rule_list_number"><span class="rule_list_text h5 ms-3">Each new level gets
                             progressively harder with less time available to find all the pairs</span></p>
                     <p class="col-12 cmt-1 rule_list_number"><span class="rule_list_text h5 ms-3">Currently, there are
                             three levels to play through</span></p>
                     <p class="col-12 cmt-1 rule_list_number"><span class="rule_list_text h5 ms-3">Use the toggles to
-                            mute background music or sound effects</p>
+                            mute background music or sound effects</span></p>
                 </div>
                 <div class="col-6 align-self-center d-none d-lg-block">
-                    <img class="mx-auto d-block" src="assets/images/game_one.jpg" alt="game image">
+                    <img class="mx-auto d-block" src="assets/images/game_one.jpg" alt="Game layout">
                 </div>
             </div>
         </div>
@@ -116,18 +116,16 @@
         <div class="btn-container cmt-5">
             <div class="btn-sub-container">
                 <button type="button" class="spring game-btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                    <p>Launch Game!</p>
+                    Launch Game!
                 </button>
             </div>
         </div>
 
         <!-- Modal -->
         <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            aria-labelledby="staticBackdrop" aria-hidden="true">
             <div class="modal-dialog modal-fullscreen">
                 <div class="modal-content" id="modal-body">
-                    <div class="modal-body">
-                        <div id="game-display" class="game">
 
                             <!-- Overlay -->
                             <div id="new-game-text" class="overlay-text visible">
@@ -151,6 +149,8 @@
                                 <div class="overlay-text-small overlay-text-words">Click to Restart</div>
                             </div>
 
+                    <div class="modal-body">
+                        
                             <!-- Main Game Area -->
                             <!-- Game Score and Clicks -->
                             <div class="game-info-container">
@@ -171,137 +171,137 @@
                                 <!-- Card Pair One -->
                                 <div class="card">
                                     <div class="card-back card-face">
-                                        <img class="brain" src="assets/images/brain-shape.png">
+                                        <img class="brain" src="assets/images/brain-shape.png" alt="Back of card with a brain logo">
                                     </div>
                                     <div class="card-front card-face">
-                                        <img class="card-value" src="assets/images/circle-b-1.jpg">
+                                        <img class="card-value" src="assets/images/circle-b-1.jpg" alt="Front of card with random icon">
                                     </div>
                                 </div>
                                 <div class="card">
                                     <div class="card-back card-face">
-                                        <img class="brain" src="assets/images/brain-shape.png">
+                                        <img class="brain" src="assets/images/brain-shape.png" alt="Back of card with a brain logo">
                                     </div>
                                     <div class="card-front card-face">
-                                        <img class="card-value" src="assets/images/circle-b-1.jpg">
+                                        <img class="card-value" src="assets/images/circle-b-1.jpg" alt="Front of card with random icon">
                                     </div>
                                 </div>
                                 <!-- Card Pair Two -->
                                 <div class="card">
                                     <div class="card-back card-face">
-                                        <img class="brain" src="assets/images/brain-shape.png">
+                                        <img class="brain" src="assets/images/brain-shape.png" alt="Back of card with a brain logo">
                                     </div>
                                     <div class="card-front card-face">
-                                        <img class="card-value" src="assets/images/circle-p-1.jpg">
+                                        <img class="card-value" src="assets/images/circle-p-1.jpg" alt="Front of card with random icon">
                                     </div>
                                 </div>
                                 <div class="card">
                                     <div class="card-back card-face">
-                                        <img class="brain" src="assets/images/brain-shape.png">
+                                        <img class="brain" src="assets/images/brain-shape.png" alt="Back of card with a brain logo">
                                     </div>
                                     <div class="card-front card-face">
-                                        <img class="card-value" src="assets/images/circle-p-1.jpg">
+                                        <img class="card-value" src="assets/images/circle-p-1.jpg" alt="Front of card with random icon">
                                     </div>
                                 </div>
                                 <!-- Card Pair Three -->
                                 <div class="card">
                                     <div class="card-back card-face">
-                                        <img class="brain" src="assets/images/brain-shape.png">
+                                        <img class="brain" src="assets/images/brain-shape.png" alt="Back of card with a brain logo">
                                     </div>
                                     <div class="card-front card-face">
-                                        <img class="card-value" src="assets/images/circle-p-2.jpg">
+                                        <img class="card-value" src="assets/images/circle-p-2.jpg" alt="Front of card with random icon">
                                     </div>
                                 </div>
                                 <div class="card">
                                     <div class="card-back card-face">
-                                        <img class="brain" src="assets/images/brain-shape.png">
+                                        <img class="brain" src="assets/images/brain-shape.png" alt="Back of card with a brain logo">
                                     </div>
                                     <div class="card-front card-face">
-                                        <img class="card-value" src="assets/images/circle-p-2.jpg">
+                                        <img class="card-value" src="assets/images/circle-p-2.jpg" alt="Front of card with random icon">
                                     </div>
                                 </div>
                                 <!-- Card Pair Four -->
                                 <div class="card">
                                     <div class="card-back card-face">
-                                        <img class="brain" src="assets/images/brain-shape.png">
+                                        <img class="brain" src="assets/images/brain-shape.png" alt="Back of card with a brain logo">
                                     </div>
                                     <div class="card-front card-face">
-                                        <img class="card-value" src="assets/images/square-p-1.jpg">
+                                        <img class="card-value" src="assets/images/square-p-1.jpg" alt="Front of card with random icon">
                                     </div>
                                 </div>
                                 <div class="card">
                                     <div class="card-back card-face">
-                                        <img class="brain" src="assets/images/brain-shape.png">
+                                        <img class="brain" src="assets/images/brain-shape.png" alt="Back of card with a brain logo">
                                     </div>
                                     <div class="card-front card-face">
-                                        <img class="card-value" src="assets/images/square-p-1.jpg">
+                                        <img class="card-value" src="assets/images/square-p-1.jpg" alt="Front of card with random icon">
                                     </div>
                                 </div>
                                 <!-- Card Pair Five -->
                                 <div class="card">
                                     <div class="card-back card-face">
-                                        <img class="brain" src="assets/images/brain-shape.png">
+                                        <img class="brain" src="assets/images/brain-shape.png" alt="Back of card with a brain logo">
                                     </div>
                                     <div class="card-front card-face">
-                                        <img class="card-value" src="assets/images/square-y-2.jpg">
+                                        <img class="card-value" src="assets/images/square-y-2.jpg" alt="Front of card with random icon">
                                     </div>
                                 </div>
                                 <div class="card">
                                     <div class="card-back card-face">
-                                        <img class="brain" src="assets/images/brain-shape.png">
+                                        <img class="brain" src="assets/images/brain-shape.png" alt="Back of card with a brain logo">
                                     </div>
                                     <div class="card-front card-face">
-                                        <img class="card-value" src="assets/images/square-y-2.jpg">
+                                        <img class="card-value" src="assets/images/square-y-2.jpg" alt="Front of card with random icon">
                                     </div>
                                 </div>
                                 <!-- Card Pair Six -->
                                 <div class="card">
                                     <div class="card-back card-face">
-                                        <img class="brain" src="assets/images/brain-shape.png">
+                                        <img class="brain" src="assets/images/brain-shape.png" alt="Back of card with a brain logo">
                                     </div>
                                     <div class="card-front card-face">
-                                        <img class="card-value" src="assets/images/triangle-b-2.jpg">
+                                        <img class="card-value" src="assets/images/triangle-b-2.jpg" alt="Front of card with random icon">
                                     </div>
                                 </div>
                                 <div class="card">
                                     <div class="card-back card-face">
-                                        <img class="brain" src="assets/images/brain-shape.png">
+                                        <img class="brain" src="assets/images/brain-shape.png" alt="Back of card with a brain logo">
                                     </div>
                                     <div class="card-front card-face">
-                                        <img class="card-value" src="assets/images/triangle-b-2.jpg">
+                                        <img class="card-value" src="assets/images/triangle-b-2.jpg" alt="Front of card with random icon">
                                     </div>
                                 </div>
                                 <!-- Card Pair Seven -->
                                 <div class="card">
                                     <div class="card-back card-face">
-                                        <img class="brain" src="assets/images/brain-shape.png">
+                                        <img class="brain" src="assets/images/brain-shape.png" alt="Back of card with a brain logo">
                                     </div>
                                     <div class="card-front card-face">
-                                        <img class="card-value" src="assets/images/triangle-p-1.jpg">
+                                        <img class="card-value" src="assets/images/triangle-p-1.jpg" alt="Front of card with random icon">
                                     </div>
                                 </div>
                                 <div class="card">
                                     <div class="card-back card-face">
-                                        <img class="brain" src="assets/images/brain-shape.png">
+                                        <img class="brain" src="assets/images/brain-shape.png" alt="Back of card with a brain logo">
                                     </div>
                                     <div class="card-front card-face">
-                                        <img class="card-value" src="assets/images/triangle-p-1.jpg">
+                                        <img class="card-value" src="assets/images/triangle-p-1.jpg" alt="Front of card with random icon">
                                     </div>
                                 </div>
                                 <!-- Card Pair Eight -->
                                 <div class="card">
                                     <div class="card-back card-face">
-                                        <img class="brain" src="assets/images/brain-shape.png">
+                                        <img class="brain" src="assets/images/brain-shape.png" alt="Back of card with a brain logo">
                                     </div>
                                     <div class="card-front card-face">
-                                        <img class="card-value" src="assets/images/triangle-y-1.jpg">
+                                        <img class="card-value" src="assets/images/triangle-y-1.jpg" alt="Front of card with random icon">
                                     </div>
                                 </div>
                                 <div class="card">
                                     <div class="card-back card-face">
-                                        <img class="brain" src="assets/images/brain-shape.png">
+                                        <img class="brain" src="assets/images/brain-shape.png" alt="Back of card with a brain logo">
                                     </div>
                                     <div class="card-front card-face">
-                                        <img class="card-value" src="assets/images/triangle-y-1.jpg">
+                                        <img class="card-value" src="assets/images/triangle-y-1.jpg" alt="Front of card with random icon">
                                     </div>
                                 </div>
                             </div>
@@ -325,7 +325,7 @@
                                     <span class="material-icons">volume_up</span>
                                 </div>
                             </div>
-                        </div>
+                        
                     </div>
 
                     <div class="modal-footer">
@@ -341,7 +341,7 @@
 
     <div id="contact"></div>
     <section class="cmt-6">
-
+        <h1>Send us a message!</h1>
         <form id="contactForm" class="container">
 
             <div class="row mb-4 align-items-center justify-content-center">
@@ -354,7 +354,7 @@
             <div class="row mb-4 align-items-center justify-content-center">
                 <label for="email" class="col-sm-2 col-form-label col-form-label-sm">Your email</label>
                 <div class="col-sm-8">
-                    <input type="email" class="form-control form-control-sm" id="emailaddress" name="email"
+                    <input type="email" class="form-control form-control-sm" id="email" name="email"
                         placeholder="name@example.com" required>
                 </div>
             </div>
@@ -392,11 +392,11 @@
         </div>
     </footer>
 
-    <section id="scripts">
+    <div id="scripts">
 
         <!-- EmailJS Scripts - Required for contact form -->
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-        <script type="text/javascript">
+        <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+        <script>
             emailjs.init('user_6mYiVdlKQsQAahg05VDDV')
         </script>
         <script src="assets/js/sendEmail.js"></script>
@@ -406,7 +406,7 @@
             integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
             crossorigin="anonymous"></script>
 
-    </section>
+    </div>
 
 </body>
 

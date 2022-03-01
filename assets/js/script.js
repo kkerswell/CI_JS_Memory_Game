@@ -13,4 +13,3 @@ $(window).on('shown.bs.modal', function(){
     ltOverlay.setAttribute("style", "height: " + modalHeight + "px;");
     vOverlay.setAttribute("style", "height: " + modalHeight + "px;");
 });
-

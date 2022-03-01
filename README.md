@@ -1,120 +1,568 @@
-https://www.fontspace.com/digits-font-f2006 - font
+# **<center>Brain sTRAIN</center>**
 
-https://seeklogo.com/vector-logo/319158/brain-shape - logo
+Developer: Keith Kerswell
 
-https://www.freepik.com/free-vector/head-profile-with-gears_4347647.htm?query=brain%20icon - logo
+![Responsive Pictures of site](docs/gear-head.png)
 
-https://seeklogo.com/vector-logo/319158/brain-shape - logo
+[Live webpage](https://kkerswell.github.io/CI_JS_Memory_Game/)
 
-https://code-boxx.com/simple-css-bounce-effect/#sec-extra - bounce
+## Table of Contents
 
-https://www.freepik.com/free-vector/oops-404-error-with-broken-robot-concept-illustration_13315300.htm - 404 image
+1. [Project Goals](#project-goals)
+    1. [User Goals](#user-goals)
+    2. [Site Owner Goals](#site-owner-goals)
+2. [User Experience](#user-experience)
+    1. [Target Audience](#target-audience)
+    2. [User Requrements and Expectations](#user-requrements-and-expectations)
+    3. [User Stories](#user-stories)
+3. [Design](#Design)
+    1. [Design Choices](#design-choices)
+    2. [Colour Scheme](#colour-scheme)
+    3. [Fonts](#fonts)
+    4. [Images and Video](#images-and-video)
+    5. [Structure](#structure)
+    6. [Wireframes](#wireframes)
+4. [Technologies Used](#technologies-used)
+    1. [Languages](#languages)
+    2. [Frameworks & Tools](#frameworks--tools)
+5. [Features](#features)
+    1. [Logo and Navigation Bar](#logo-and-navigation-bar)
+    2. [Footer](#footer)
+    3. [Homepage](#homepage)
+    4. [About Us](#about-us)
+    5. [Our Animals](#our-animals)
+    6. [Fundraising](#fundraising)
+    7. [Contact Form](#contact-form)
+    8. [Map and address](#map-and-address)
+6. [Development](#development)
+    1. [Building and Maintaining](#building-and-maintaining)
+    2. [Commits](#commits)
+    3. [Deployment](#deployment)
+    4. [Cloning](#cloning)
+7. [Testing](#testing)
+    1. [HTML Validation](#html-validation)
+    2. [CSS Validation](#css-validation)
+    3. [Accessibility](#accessibility)
+    4. [Performance](#performance)
+    5. [Responsiveness](#responsiveness)
+    6. [Browser compatibility](#browser-compatability)
+    7. [Testing user stories](#testing-user-stories)
+8. [Bugs](#Bugs)
+9. [Credits](#credits)
+10. [Acknowledgements](#acknowledgements)
 
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+## Project Goals 
 
-Welcome Keith Kerswell,
+### User Goals
+- Play a fun matching game
+- Practice and improve memory
+- Contact the site owner
+- Find the site owner's social media
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+### Site Owner Goals
+- Attract people who want to play a matching game
+- Attract people who want to improve their memory
+- Have a way for people to contact us
+- Have links to our social media pages
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+## User Experience
 
-## Gitpod Reminders
+### Target Audience
+- People looking to play a game
+- People looking to train their memory
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+### User Requrements and Expectations
 
-`python3 -m http.server`
+- A simple and intuitive navigation system
+- Quickly and easily find relevant information
+- Links and functions that work as expected
+- Good presentation and a visually appealing design regardless of screen size
+- An easy way to contact the site owner
+- Simple layout with the focus being on the game
+- Accessibility
 
-A blue button should appear to click: _Make Public_,
+### User Stories
 
-Another blue button should appear to click: _Open Browser_.
+#### First-time User 
+1. As a first time user, I want to be able to navigate the site easily
+2. As a first time user, I want to find instructions on how to play
+3. As a first time user, I want to be able to locate the game easily
+4. As a first time user, I want to be able to play the game
+5. As a first time user, I want to be able to contact the site owner
+6. As a first time user, I want to access the site owner's social media
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+#### Returning User
+7. As a returning user, I want to be able to navigate the site easily
+8. As a first time user, I want to find instructions on how to play
+9. As a first time user, I want to be able to locate the game easily
+10. As a first time user, I want to be able to play the game.
+11. As a first time user, I want to be able to contact the site owner
+12. As a first time user, I want to access the site owner's social media
 
-A blue button should appear to click: _Make Public_,
+#### Site Owner 
+13. As the site owner, I want users to be able to navigate the site easily
+14. As the site owner, I want users to be able to find instructions on how to play
+15. As the site owner, I want users to be able to locate the game easily
+16. As the site owner, I want users to be able to play the game.
+17. As the site owner, I want users to be able to contact us
+18. As the site owner, I want users to be able to have links to our social media
 
-Another blue button should appear to click: _Open Browser_.
+## Design
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+### Design Choices
 
-To log into the Heroku toolbelt CLI:
+The webpage was designed with to be exciting and vibrant to set the users expectation for a fun game. There is not a large amount of content on the page as the focus is on the game itself. Due to this, the site was going to be on one page but with sections that the user can navigate through easily.
+   
+### Colour Scheme
+- Create a fun and vibrant colour scheme
+- The site will use six colours but four of these make up the background of the page.
+- Final palette colours that were chosen were #ff7f00, #00819f, #d9005f, #4da100, #f4f7f5 and #24343f.
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+### Fonts
+- Create a fun look with soft lines
+- Final font chosen was Montserrat Alternates by Google Fonts
+- Source: https://fonts.google.com/specimen/Montserrat+Alternates?query=Montserrat+Alternates
+- Additional font used to get the numbering effect in the 'Instructions' section.
+- Source: https://www.fontspace.com/digits-font-f2006
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+### Images and Video
+- For the project, royalty free imagry is required
+- Image sources
+  - Main Logo - https://www.freepik.com/free-vector/head-profile-with-gears_4347647.htm?query=brain%20icon
+  - Back of Card Icons: https://seeklogo.com/vector-logo/319158/brain-shape
+  - Front of Card Icons: https://www.vecteezy.com/vector-art/4213194-matching-pairs-geometry-game-memory-training-circle-triangle-square-tile-on-pink-teal-yellow-white-background
+  - 404 Error - https://www.freepik.com/free-vector/oops-404-error-with-broken-robot-concept-illustration_13315300.htm
 
-------
+### Structure
+The page is structured in a well know, recognisable, user friendly, and easy to learn way. 
+    
+Upon arriving to the website the user sees a familiar type of navigation bar and footer bar. 
+    
+The website consists of one page with four sections plus an additional full-screen modal for the game: 
+- A main area consisting of the site logo, name and catchphrases.
+- An instructions area where the users learn how to play the game.
+- A game section which has a button to launch the game in a new modal.
+- A contact section with a contact form.
 
-## Release History
+## Wireframes
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+<details><summary>Main Site (One Page Layout)</summary>
+<img src="docs/wireframes/page-wireframe.png">
+</details>
+<details><summary>Game Area Modal (Full Screen)</summary>
+<img src="docs/wireframes/modal-wireframe.png">
+</details>
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+## Technologies Used
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+### Languages
+- HTML
+- CSS
+- Javascript
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+### Frameworks & Tools
+- Git
+- GitHub
+- Gitpod
+- Balsamiq
+- Google Fonts
+- Font Awsome
+- TinyPNG<span>.</span>com
+- Favicon<span>.</span>io
+- JQuery
+- Bootstrap
+- EmailJS
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+## Features
+The page consists of one page with a full-screen modal and seven features
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+### Navigation Bar
+- Sticky feature, so it always remains at the top of the page.
+- The navbar is fully responsive and includes links to the Main, Instructions, Game and Contact sections.
+- It allows users to easily navigate the page
+- User stories covered: 1, 7, 13
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+![Navbar](docs/features/feature-navbar.jpg)
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+### Main area
+- This area shows a hero image and striking text to give an impactful first impression to the site
+- Fully responsive
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+![Main One](docs/features/feature-main-one.jpg)
+![Main Two](docs/features/feature-main-two.jpg)
+![Main Three](docs/features/feature-main-three.jpg)
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+### Instructions
+- Gives easy to follow instructions
+- Fully responsive and changes layout and removes picture on smaller screens
+- User stories covered: 2, 8, 14
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+![Instructions](docs/features/feature-instructions.jpg)
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+### Game Button
+- Large animated button to draw attention to the user and show it can be interacted with
+- Fully responsive
+- User stories covered: 3, 9, 15
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+![Game Button](docs/features/feature-game-button.jpg)
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+### Game Modal
+- Displays the game in a full-page modal
+- Fully responsive
+- User stories covered: 4, 10, 16
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+![Game Modal](docs/features/feature-game-modal.jpg)
 
-------
+### Contact Form
+- A way for users to contact the site owner
+- Fully responsive
+- User stories covered: 5, 11, 17
 
-## FAQ about the uptime script
+![Contact Form](docs/features/feature-contact-form.jpg)
 
-**Why have you added this script?**
+### Footer
+- Fully responsive
+- Consists of two seperate sections: Copyright information and social media links
+- User stories covered: 6, 12, 18
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+![Footer](docs/features/feature-footer.jpg)
 
-**How will this affect me?**
+## Development 
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+### Building and Maintaining
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+GitHub was used as version control software to maintain, upload and share code with other developers.
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+GitPod was used to write the code.
 
-**So….?**
+### Commits
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+I kept track of updates by using commits in Git.  The terminal commands for these were:
 
-**Can I opt out?**
+* git add .
+* git commit -m "Description of change"
+* git push
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+### Deployment
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+The website was deployed to GitHub Pages.
 
-**Anything more?**
+To complete this action I completed the following process:
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+1. Navigated to my site repository: https://github.com/kkerswell/CI_JS_Memory_Game
+2. Clicked on "Settings" within the top navigation area
+3. Clicked on "Pages" within the side navigation area
+4. Clicked the dropdown box under "Source" and choose "main"
+5. Clicked on the "Save" button
+6. Once saved, the url is then provided
 
----
+### Cloning
 
-Happy coding!
+1. Navigate to repo: https://github.com/kkerswell/CI_JS_Memory_Game
+2. Click on the 'Code' button
+3. Copy the repository url
+4. Navigate to your personal GitHub page
+5. Click on the 'Repositories' link at the top of the page
+6. Click on the 'New' button
+7. Click on 'Import a repository' at the top of the page
+8. Pase the repository url from above
+9. Name your new repository
+10. Click 'Begin Import'
+
+## Testing
+
+### HTML Validation
+
+https://validator.w3.org/ was used to validate HTML.
+
+#### index.html
+
+<details><summary>Picture</summary>
+<img src="docs/validation/index.jpg">
+</details><br>
+
+### CSS Validation
+
+https://jigsaw.w3.org/css-validator/ was used to validate CSS.
+
+#### style.css
+<details><summary>Picture</summary>
+<img src="docs/validation/css.jpg">
+</details><br>
+
+#### game.css
+<details><summary>Picture</summary>
+<img src="docs/validation/css-game.jpg">
+</details><br>
+
+### Performance & Accessibility
+
+https://developers.google.com/web/tools/lighthouse was used to test performance.
+
+#### index.html
+
+<details><summary>Picture</summary>
+<img src="docs/performance/lighthouse.jpg">
+</details><br>
+
+### Responsiveness
+
+http://ami.responsivedesign.is was used to test responsiveness.
+
+#### Main
+
+<details><summary>Picture</summary>
+<img src="docs/responsive/main.jpg">
+</details><br>
+
+#### Instructions
+
+<details><summary>Picture</summary>
+<img src="docs/responsive/instructions.jpg">
+</details><br>
+
+#### Game Button
+
+<details><summary>Picture</summary>
+<img src="docs/responsive/game-button.jpg">
+</details><br>
+
+#### Game Modal
+
+<details><summary>Picture</summary>
+<img src="docs/responsive/game-modal.jpg">
+</details><br>
+
+#### Contact
+
+<details><summary>Picture</summary>
+<img src="docs/responsive/contact.jpg">
+</details><br>
+
+#### Footer
+
+<details><summary>Picture</summary>
+<img src="docs/responsive/footer.jpg">
+</details><br>
+
+### Browser compatibility
+
+The website was tested on the following browsers:
+
+- Google Chrome
+- Mozilla Firefox
+- Microsoft Egde
+
+### Testing user stories
+
+1. As a first time user, I want to be able to navigate the site easily
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Navigation Bar | Always visible | Stuck to the top of the viewport | Works as expected |
+
+<details><summary>Screenshots</summary>
+<img src="docs/features/feature-navbar.jpg">
+</details><br>
+
+2. As a first time user, I want to find instructions on how to play
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Instructions | Navigate to the Instructions | Find the Instructions | Works as expected |
+
+<details><summary>Screenshots</summary>
+<img src="docs/features/feature-instructions.jpg">
+</details><br>
+
+3. As a first time user, I want to be able to locate the game easily
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Navigation Bar | Stuck to the top of the viewport, click Game | Page navigates to Game button | Works as expected |
+| Game Button | Navigate to the Game Button | See a clearly visible button | Works as expected |
+
+<details><summary>Screenshots</summary>
+<img src="docs/features/feature-navbar.jpg">
+<img src="docs/features/feature-game-button.jpg">
+</details><br>
+
+4. As a first time user, I want to be able to play the game
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Game Modal | Click the Launch Game! button  | Modal opens in full screen with game ready to play | Works as expected |
+
+<details><summary>Screenshots</summary>
+<img src="docs/features/feature-game-modal.jpg">
+</details><br>
+
+5. As a first time user, I want to be able to contact the site owner
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Contact Form | Navigate to the Contact Form | Find the form | Works as expected |
+
+<details><summary>Screenshots</summary>
+<img src="docs/features/feature-contact-form.jpg">
+</details><br>
+
+6. As a first time user, I want to access the site owner's social media
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Footer | Navigate to the Footer | Find the Social Media links | Works as expected |
+
+<details><summary>Screenshots</summary>
+<img src="docs/features/feature-footer.jpg">
+</details><br>
+
+7. As a returning user, I want to be able to navigate the site easily
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Navigation Bar | Always visible | Stuck to the top of the viewport | Works as expected |
+
+<details><summary>Screenshots</summary>
+<img src="docs/features/feature-navbar.jpg">
+</details><br>
+
+8. As a first time user, I want to find instructions on how to play
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Instructions | Navigate to the Instructions | Find the Instructions | Works as expected |
+
+<details><summary>Screenshots</summary>
+<img src="docs/features/feature-instructions.jpg">
+</details><br>
+
+9. As a first time user, I want to be able to locate the game easily
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Navigation Bar | Stuck to the top of the viewport, click Game | Page navigates to Game button | Works as expected |
+| Game Button | Navigate to the Game Button | See a clearly visible button | Works as expected |
+
+<details><summary>Screenshots</summary>
+<img src="docs/features/feature-navbar.jpg">
+<img src="docs/features/feature-game-button.jpg">
+</details><br>
+
+10. As a first time user, I want to be able to play the game
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Game Modal | Click the Launch Game! button  | Modal opens in full screen with game ready to play | Works as expected |
+
+<details><summary>Screenshots</summary>
+<img src="docs/features/feature-game-modal.jpg">
+</details><br>
+
+11. As a first time user, I want to be able to contact the site owner
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Contact Form | Navigate to the Contact Form | Find the form | Works as expected |
+
+<details><summary>Screenshots</summary>
+<img src="docs/features/feature-contact-form.jpg">
+</details><br>
+
+12. As a first time user, I want to access the site owner's social media
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Footer | Navigate to the Footer | Find the Social Media links | Works as expected |
+
+<details><summary>Screenshots</summary>
+<img src="docs/features/feature-footer.jpg">
+</details><br>
+
+13. As the site owner, I want users to be able to navigate the site easily
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Navigation Bar | Always visible | Stuck to the top of the viewport | Works as expected |
+
+<details><summary>Screenshots</summary>
+<img src="docs/features/feature-navbar.jpg">
+</details><br>
+
+14. As the site owner, I want users to be able to find instructions on how to play
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Instructions | Navigate to the Instructions | Find the Instructions | Works as expected |
+
+<details><summary>Screenshots</summary>
+<img src="docs/features/feature-instructions.jpg">
+</details><br>
+
+15. As the site owner, I want users to be able to locate the game easily
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Navigation Bar | Stuck to the top of the viewport, click Game | Page navigates to Game button | Works as expected |
+| Game Button | Navigate to the Game Button | See a clearly visible button | Works as expected |
+
+<details><summary>Screenshots</summary>
+<img src="docs/features/feature-navbar.jpg">
+<img src="docs/features/feature-game-button.jpg">
+</details><br>
+
+16. As the site owner, I want users to be able to play the game
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Game Modal | Click the Launch Game! button  | Modal opens in full screen with game ready to play | Works as expected |
+
+<details><summary>Screenshots</summary>
+<img src="docs/features/feature-game-modal.jpg">
+</details><br>
+
+17. As the site owner, I want users to be able to contact us
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Contact Form | Navigate to the Contact Form | Find the form | Works as expected |
+
+<details><summary>Screenshots</summary>
+<img src="docs/features/feature-contact-form.jpg">
+</details><br>
+
+18. As the site owner, I want users to be able to have links to our social media
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Footer | Navigate to the Footer | Find the Social Media links | Works as expected |
+
+<details><summary>Screenshots</summary>
+<img src="docs/features/feature-footer.jpg">
+</details><br>
+
+## Problems
+
+- Adding new levels to the game.  I tried researching online how I could to this.  However, as this was code used from a tutorial I saw, this was difficult. I had to resort to asking for tutor support and got the right idea from the second tutor. I was also then able to make more significant changes such as changing the difficulties by lowering the time.
+- Making the game area fully responsive. This was difficult as I was working with new CSS featurs that I hadn't used before. I tried using bootstrap but this did not fix the issue. I had to resort to asking for tutor support and after talking it through with them, I was able to solve part of the issue myself but took their advice onboard for adding media queries as well.
+
+## Credits
+
+The following is a list of external sources that were utilised for this website.
+
+- https://fontawesome.com/
+- https://fonts.google.com/
+- https://www.freepik.com/
+- https://seeklogo.com/
+- https://www.vecteezy.com/
+- https://www.freepik.com/
+- https://www.youtube.com/watch?v=28VfzEiJgy4
+- https://www.youtube.com/watch?v=3uuQ3g92oPQ
+- https://code-boxx.com/simple-css-bounce-effect/#sec-extra
+
+## Acknowledgements
+
+I would like to take the opportunity to thank:
+
+- My mentor XX XX for X/X feedback, advice, guidance and support.
+- Code Institute tutor support for their time and coding support.
