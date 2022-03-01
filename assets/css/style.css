@@ -106,116 +106,6 @@ header {
     color: var(--color-five);
 }
 
-/****************************************** Header End */
-
-/****************************************** Main Start */
-
-main {
-    user-select: none !important;
-}
-
-/**** Main Start ****/
-
-.intro img {
-    width: 35vw;
-    height: auto;
-}
-
-/**** How To Play Start ****/
-
-.rule_list_number {
-    font-family: 'digitsregular', Arial, sans-serif;
-}
-
-.rule_list_number:nth-of-type(2)::before {
-    content: "A";
-}
-
-.rule_list_number:nth-of-type(3)::before {
-    content: "b";
-}
-
-.rule_list_number:nth-of-type(4)::before {
-    content: "C";
-}
-
-.rule_list_number:nth-of-type(5)::before {
-    content: "d";
-}
-
-.rule_list_number:nth-of-type(6)::before {
-    content: "E";
-}
-
-.rule_list_number:nth-of-type(7)::before {
-    content: "f";
-}
-
-.rule_list_number:nth-of-type(8)::before {
-    content: "G";
-}
-
-.rule_list_text {
-    font-family: initial;
-}
-
-.rule_list_guide_icon {
-    font-family: 'digitsregular', Arial, sans-serif;
-}
-
-.how_to_play img {
-    width: 75%;
-    height: auto;
-    margin-left: auto !important;
-    margin-right: auto !important;
-}
-
-/******************************************* Main End */
-
-/******************************************* Form End */
-
-label {
-    color: var(--color-five);
-}
-
-/******************************************* Form End */
-
-/*************************************** Footer Start */
-
-footer {
-    margin-top: 10rem;
-}
-
-footer p {
-    line-height: 5.5em;
-    font-size: medium;
-    font-weight: 600;
-}
-
-footer ul {
-    list-style-type: none;
-    line-height: 5.5em;
-    display: flex;
-    justify-content: center;
-}
-
-footer ul a {
-    text-decoration: none;
-    font-size: x-large;
-    margin: 0 .5em 0 .5em;
-}
-
-footer p,
-footer ul a {
-    color: var(--color-five);
-}
-
-footer ul a:hover {
-    color: var(--color-six);
-}
-
-/***************************************** Footer End */
-
 /* On screens that are 400px or less, set the top-nav to 100% width */
 @media screen and (max-width: 400px) {
 
@@ -236,13 +126,35 @@ footer ul a:hover {
 
 }
 
-/* On screens that are 1000px or less, set the contact-btn to 25% width */
+/****************************************** Header End */
 
-.contact-btn {
-    width: 25% !important;
+/****************************************** Main Start */
+
+main {
+    user-select: none !important;
 }
 
-/************************************************* Game Launch Button Start */
+/**** Main Start ****/
+
+.intro img {
+    width: 35vw;
+    height: auto;
+}
+
+/**** How To Play Start ****/
+
+.rule_list_text {
+    margin-top: 2.5em !important;
+}
+
+.how_to_play img {
+    width: 75%;
+    height: auto;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+/**** Game Launch Button Start ****/
 
 .btn-container {
     max-width: 270px;
@@ -255,8 +167,8 @@ footer ul a:hover {
 }
 
 .game-btn {
-    width: 100%;
-    height: 0;
+    width: 20em;
+    height: 20em;
     padding-bottom: 100%;
     border-radius: 50%;
     background-color: rgba(244, 247, 245, .5) !important;
@@ -322,7 +234,57 @@ footer ul a:hover {
     transform: translateY(1em);
 }
 
-/*************************************************** Game Launch Button End */
+/******************************************* Main End */
+
+/***************************************** Form Start */
+
+label {
+    color: var(--color-five);
+}
+
+/* On screens that are 1000px or less, set the contact-btn to 25% width */
+
+.contact-btn {
+    width: 25% !important;
+}
+
+/******************************************* Form End */
+
+/*************************************** Footer Start */
+
+footer {
+    margin-top: 10rem;
+}
+
+footer p {
+    line-height: 5.5em;
+    font-size: medium;
+    font-weight: 600;
+}
+
+footer ul {
+    list-style-type: none;
+    line-height: 5.5em;
+    display: flex;
+    justify-content: center;
+}
+
+footer ul a {
+    text-decoration: none;
+    font-size: x-large;
+    margin: 0 .5em 0 .5em;
+}
+
+footer p,
+footer ul a {
+    color: var(--color-five);
+}
+
+footer ul a:hover {
+    color: var(--color-six);
+}
+
+/***************************************** Footer End */
 
 /*********************************************************** 404 Page Start */
 

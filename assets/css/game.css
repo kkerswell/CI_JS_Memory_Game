@@ -1,5 +1,3 @@
-/***************************************************** Main Game Area Start */
-
 /* Body Start */
 
 .modal-content {
@@ -328,11 +326,3 @@ input:checked + .volSwitch:after, input:checked + .fxSwitch:after {
 }
 
 /* Game Volume Controls End */
-
-/******************************************************* Main Game Area End */
-
-/******************************************************* Modal Footer Start */
-
-
-
-/********************************************************* Modal Footer End */
