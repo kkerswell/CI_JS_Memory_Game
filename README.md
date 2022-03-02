@@ -295,6 +295,24 @@ https://jigsaw.w3.org/css-validator/ was used to validate CSS.
 <img src="docs/validation/css-game.jpg">
 </details><br>
 
+### JS Validation
+
+https://jshint.com/ was used to validate Javascript
+
+#### sendEmail.js
+<details><summary>Picture</summary>
+<img src="docs/validation/js-sendEmail.jpg">
+</details><br>
+
+#### game.js
+<details><summary>Picture</summary>
+<img src="docs/validation/js-game-one.jpg">
+</details><br>
+
+<details><summary>Picture</summary>
+<img src="docs/validation/js-game-two.jpg">
+</details><br>
+
 ### Performance & Accessibility
 
 https://developers.google.com/web/tools/lighthouse was used to test performance.
