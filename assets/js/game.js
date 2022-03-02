@@ -38,7 +38,7 @@ class MixOrMatch {
         this.cardsArray = cards;
         this.currentlevel = level;
         this.timeRemaining = totalTime;
-        this.timer = document.getElementById('time-remaining')
+        this.timer = document.getElementById('time-remaining');
         this.ticker = document.getElementById('flips');
         this.audioController = new AudioController();
     }
@@ -52,10 +52,13 @@ class MixOrMatch {
         this.busy = true;
         setTimeout(() => {
             this.audioController.startMusic();
+            this.audioController.bgMusic.muted = true;
+            this.audioController.victorySound.muted = true;
+            this.audioController.gameOverSound.muted = true;
             this.shuffleCards(this.cardsArray);
             this.countdown = this.startCountdown();
             this.busy = false;
-        }, 500)
+        }, 500);
         this.hideCards();
         this.timer.innerText = this.timeRemaining;
         this.ticker.innerText = this.totalClicks;
@@ -73,7 +76,7 @@ class MixOrMatch {
             this.shuffleCards(this.cardsArray);
             this.countdown = this.startCountdown();
             this.busy = false;
-        }, 500)
+        }, 500);
         this.hideCards();
         this.timer.innerText = this.timeRemaining;
         this.ticker.innerText = this.totalClicks;
@@ -90,7 +93,7 @@ class MixOrMatch {
             this.shuffleCards(this.cardsArray);
             this.countdown = this.startCountdown();
             this.busy = false;
-        }, 500)
+        }, 500);
         this.hideCards();
         this.timer.innerText = this.timeRemaining;
         this.ticker.innerText = this.totalClicks;
@@ -264,13 +267,23 @@ function volMuteUnmute(currentGame) {
 
 // Original Code - Will allow the user to mute and unmute game sound effects
 function fxMuteUnmute(currentGame) {
+    let fxSwitchInitialState = document.getElementById('fxSwitch').checked;
     let fxSwitch = document.getElementById('fxSwitch');
 
+    console.log(fxSwitchInitialState);
+    if (fxSwitchInitialState === false) {
+        currentGame.audioController.flipSound.muted = true;
+        currentGame.audioController.matchSound.muted = true;        
+    } else if (fxSwitchInitialState === true) {
+        currentGame.audioController.flipSound.muted = false;
+        currentGame.audioController.matchSound.muted = false;
+    }
+
     fxSwitch.addEventListener('change', function() {
-        if (!this.checked) {
+        if (!fxSwitch.checked) {
             currentGame.audioController.flipSound.muted = true;
             currentGame.audioController.matchSound.muted = true;
-        } else if (this.checked) {
+        } else if (fxSwitch.checked) {
             currentGame.audioController.flipSound.muted = false;
             currentGame.audioController.matchSound.muted = false;
         }

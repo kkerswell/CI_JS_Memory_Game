@@ -13,9 +13,9 @@ document.getElementById('contactForm')
         emailjs.sendForm(serviceID, templateID, this)
             .then(() => {
                 btn.innerHTML = 'Message Sent!';
-                btn.disabled = true
+                btn.disabled = true;
             }, (err) => {
                 btn.innerHTML = 'Error';
-                btn.disabled = true
+                btn.disabled = true;
             });
     });
