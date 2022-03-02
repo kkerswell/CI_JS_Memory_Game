@@ -563,6 +563,7 @@ The website was tested on the following browsers:
 
 - Adding new levels to the game.  I tried researching online how I could to this.  However, as this was code used from a tutorial I saw, this was difficult. I had to resort to asking for tutor support and got the right idea from the second tutor. I was also then able to make more significant changes such as changing the difficulties by lowering the time.
 - Making the game area fully responsive. This was difficult as I was working with new CSS featurs that I hadn't used before. I tried using bootstrap but this did not fix the issue. I had to resort to asking for tutor support and after talking it through with them, I was able to solve part of the issue myself but took their advice onboard for adding media queries as well.
+- I wanted to add a feature where, depending on which section of the page the user was currently in, the navbar items at the top of the page would have an indicator on them.  I used JS to achieve this and had various levels of success but ultimately could not get it to function as I wanted.  Given the page is easy to navigate and not much time would be spent by the user on the page itself (as opposed to being within the game area) I felt it was not worth the time investment to troubleshoot this feature further and so removed it entirely.
 
 ## Credits
 
@@ -582,5 +583,5 @@ The following is a list of external sources that were utilised for this website.
 
 I would like to take the opportunity to thank:
 
-- My mentor XX XX for X/X feedback, advice, guidance and support.
+- My mentor Rohit Sharma for all the feedback, advice, guidance and support.
 - Code Institute tutor support for their time and coding support.
