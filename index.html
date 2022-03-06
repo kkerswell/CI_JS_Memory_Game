@@ -21,9 +21,8 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
         integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous" />
     <!-- INTERNAL SCRIPTS -->
-    <!-- <script src="assets/js/script.js"></script> -->
     <script src="assets/js/game.js"></script>
-
+    <!-- <script src="assets/js/sendEmail-copy.js"></script> -->
     <link rel="icon" type="image/x-icon" href="assets/images/favicon/favicon.ico">
 
     <title>Brain sTRAIN</title>
@@ -330,39 +329,47 @@
 
     </main>
 
-    <div id="contact"></div>
-    <section class="cmt-6">
-        
-        <h1 class="row align-items-center justify-content-center">Send us a message!</h1>
-        <form id="contactForm" class="container cmt-1">
+    <div id="contact">
+        <section id="form-ready" class="cmt-3">        
+            <h1 class="row align-items-center justify-content-center">Send us a message!</h1>
+            <form id="contact-form" class="container cmt-1">
 
-            <div class="row mb-4 align-items-center justify-content-center">
-                <label for="name" class="col-sm-2 col-form-label col-form-label-sm">Your name</label>
-                <div class="col-sm-8">
-                    <input type="text" class="form-control form-control-sm" id="name" name="name"
-                        placeholder="enter your name" required>
+                <div class="row mb-4 align-items-center justify-content-center">
+                    <label for="name" class="col-sm-2 col-form-label col-form-label-sm">Your name</label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control form-control-sm" id="name" name="name"
+                            placeholder="enter your name" required>
+                    </div>
                 </div>
-            </div>
-            <div class="row mb-4 align-items-center justify-content-center">
-                <label for="email" class="col-sm-2 col-form-label col-form-label-sm">Your email</label>
-                <div class="col-sm-8">
-                    <input type="email" class="form-control form-control-sm" id="email" name="email"
-                        placeholder="name@example.com" required>
+                <div class="row mb-4 align-items-center justify-content-center">
+                    <label for="email" class="col-sm-2 col-form-label col-form-label-sm">Your email</label>
+                    <div class="col-sm-8">
+                        <input type="email" class="form-control form-control-sm" id="email" name="email"
+                            placeholder="name@example.com" required>
+                    </div>
                 </div>
-            </div>
-            <div class="row mb-4 align-items-center justify-content-center">
-                <label for="message" class="col-sm-2 col-form-label col-form-label-sm">Your message</label>
-                <div class="col-sm-8">
-                    <textarea class="form-control form-control-sm" id="message" rows="6"
-                        placeholder="enter your message" name="message" required></textarea>
+                <div class="row mb-4 align-items-center justify-content-center">
+                    <label for="message" class="col-sm-2 col-form-label col-form-label-sm">Your message</label>
+                    <div class="col-sm-8">
+                        <textarea class="form-control form-control-sm" id="message" rows="6"
+                            placeholder="enter your message" name="message" required></textarea>
+                    </div>
                 </div>
-            </div>
-            <div class="row mb-5 justify-content-center">
-                <button type="submit" id="contact-btn" class="btn btn-primary contact-btn"></button>
-            </div>
+                <div class="row mb-5 justify-content-center">
+                    <button type="submit" id="contact-btn" class="btn btn-primary contact-btn">Send Message</button>
+                </div>
 
-        </form>
-    </section>
+            </form>
+        </section>
+        <section id="form-submitted" class="cmt-3 form-hidden">
+            <h1 class="row align-items-center justify-content-center">Thank you, your message has been sent!</h1>
+        </section>
+        <section id="form-error" class="cmt-3 form-hidden">
+            <h1 class="row align-items-center justify-content-center">Sorry, there was an error sending your message.</h1>
+            <p class="form-error-email">Please email us directly at 
+                <a href="mailto:support@brainstrain.com?subject = Message about Brain sTRAIN">Brain sTRAIN Support</a>.</p>
+        </section>
+    </div>
 
     <footer class="container">
         <div class="row align-items-center">
@@ -389,7 +396,9 @@
         <!-- EmailJS Scripts - Required for contact form -->
         <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
         <script>
-            emailjs.init('user_6mYiVdlKQsQAahg05VDDV')
+            (function(){
+                emailjs.init("user_6mYiVdlKQsQAahg05VDDV");
+            })();
         </script>
         <script src="assets/js/sendEmail.js"></script>
 

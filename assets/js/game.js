@@ -33,8 +33,8 @@ class AudioController {
 
 class MixOrMatch {
     constructor(cards) {
-        let totalTime;
-        let level;
+        let totalTime = null;
+        let level = null;
         this.cardsArray = cards;
         this.currentlevel = level;
         this.timeRemaining = totalTime;
@@ -270,7 +270,6 @@ function fxMuteUnmute(currentGame) {
     let fxSwitchInitialState = document.getElementById('fxSwitch').checked;
     let fxSwitch = document.getElementById('fxSwitch');
 
-    console.log(fxSwitchInitialState);
     if (fxSwitchInitialState === false) {
         currentGame.audioController.flipSound.muted = true;
         currentGame.audioController.matchSound.muted = true;        

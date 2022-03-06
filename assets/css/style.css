@@ -255,6 +255,23 @@ label {
 
 }
 
+.form-error-email {
+    text-align: center;
+}
+
+.form-error-email a {
+    color: var(--color-six);
+    text-decoration: none;
+}
+
+.form-error-email a:hover {
+    color: rgba(36,52,63, .7);
+}
+
+.form-hidden {
+    display: none;
+}
+
 /******************************************* Form End */
 
 /*************************************** Footer Start */
