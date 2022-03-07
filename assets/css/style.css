@@ -1,6 +1,10 @@
 /********************************** Base Styling Start */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates&display=swap');
 
+* {
+    box-sizing: inherit;
+}
+
 :root {
     --color-one: #ff7f00;
     /* RGB value (255,127,0) */
@@ -18,47 +22,45 @@
     --card-width: 10%;
 }
 
-body {
-    background: linear-gradient(#ff7f00, #00819f, #d9005f, #4da100);
-    user-select: none !important;
-    font-family: 'Montserrat Alternates', sans-serif;
-    /* width: 100% !important; */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    box-sizing: border-box;
 }
 
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-a {
+body {
+    background: linear-gradient(#ff7f00, #00819f, #d9005f, #4da100);
+    background-repeat: no-repeat;
+    user-select: none;
+    font-family: 'Montserrat Alternates', sans-serif;
+    text-align: center;
+    user-select: none !important;
+}
+
+p, h1, h2, h3, h4, h5, a {
     color: var(--color-five);
 }
 
 /* cmt adds custom value to bootstrap mt (margin-top) class */
 
 .cmt-1 {
-    margin-top: calc(var(--margin) * 5) !important;
+    margin-top: calc(var(--margin) * 5);
 }
-
 .cmt-2 {
-    margin-top: calc(var(--margin) * 10) !important;
+    margin-top: calc(var(--margin) * 10);
 }
-
 .cmt-3 {
-    margin-top: calc(var(--margin) * 15) !important;
+    margin-top: calc(var(--margin) * 15);
 }
-
 .cmt-4 {
-    margin-top: calc(var(--margin) * 20) !important;
+    margin-top: calc(var(--margin) * 20);
 }
-
 .cmt-5 {
-    margin-top: calc(var(--margin) * 25) !important;
+    margin-top: calc(var(--margin) * 25);
 }
-
 .cmt-6 {
-    margin-top: calc(var(--margin) * 30) !important;
+    margin-top: calc(var(--margin) * 30);
 }
 
 /************************************ Base Styling End */
@@ -129,28 +131,78 @@ header {
 
 /****************************************** Main Start */
 
-main {
-    user-select: none !important;
+/**** Intro Start ****/
+
+#intro img {
+    width: 30vw;
+    height: auto;
 }
 
-/**** Main Start ****/
+#intro p {
+    padding: 0 15%;
+}
 
-.intro img {
-    width: 35vw;
-    height: auto;
+#intro p:nth-of-type(1) {
+    font-size: 4em;
+}
+
+#intro p:nth-of-type(2) {
+    font-size: 1.5em;
+}
+
+#intro p:nth-of-type(n+3) {
+    font-size: 2.5em;
 }
 
 /**** How To Play Start ****/
 
+.how_to_play {
+    text-align: left;
+    display: flex;
+    width: 100%;
+}
+
+.how_to_play_text, .how_to_play_image {
+    width: 50%;
+}
+
+.how_to_play_text {
+    padding: 0 10vw;
+}
+
+.rule_list_title {
+    font-size: xx-large;
+    margin-top: 0;
+}
+
 .rule_list_text {
-    margin-top: 2.5em !important;
+    margin-top: 2.5em;
 }
 
 .how_to_play img {
-    width: 75%;
+    display: block;
+    width: 50%;
     height: auto;
-    margin-left: auto !important;
-    margin-right: auto !important;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* On screens that are 1000px or less, set the how_to_play container to display block,
+how_to_play_text to 100% width and how_to_play_image to display none */
+@media screen and (max-width: 1000px) {
+
+    .how_to_play {
+        display: block;
+    }
+
+    .how_to_play_text {
+        width: 100%;
+        padding: 0 5vw;
+    }
+
+    .how_to_play_image {
+        display: none;
+    }
 }
 
 /**** Game Launch Button Start ****/
@@ -166,9 +218,7 @@ main {
 }
 
 .game-btn {
-    width: 20em;
-    height: 20em;
-    padding-bottom: 100%;
+    width: 100%;
     border-radius: 50%;
     background-color: rgba(244, 247, 245, .5) !important;
     border: none;
@@ -222,6 +272,7 @@ main {
 .game-btn:hover {
     background-color: rgba(36, 52, 63, .5) !important;
     box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    cursor: grab;
 }
 
 .game-btn p:hover {
@@ -233,26 +284,129 @@ main {
     transform: translateY(1em);
 }
 
+/**** Game Modal Start ****/
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding: 0; /* Location of the box */
+    margin: 0;
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+  }
+
+  /* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
 /******************************************* Main End */
 
 /***************************************** Form Start */
 
-label {
+#contact-form {
+    text-align: left;
+    width: 50%;
+    margin: auto;
+}
+
+#contact-form label {
     color: var(--color-five);
 }
 
-/* On screens that are 1000px or less, set the contact-btn to 25% width */
-
-.contact-btn {
-    width: 25% !important;
+#contact-form input, #contact-form textarea {
+    margin: 1em 0 2em 0;
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--color-six);
+    background-color: var(--color-five);
+    background-clip: padding-box;
+    border: 1px solid var(--color-five);
+    border-radius: 0.25rem;
+    font-family: inherit; 
 }
 
-@media screen and (max-width: 575px) {
+input:focus-visible, textarea:focus-visible {
+    outline: var(--color-six) solid 2px;
+}
 
-    .contact-btn {
-        width: 50% !important;
+#contact-form input {
+    height: 3em;
+}
+
+#contact-form textarea {
+    height: 10em;
+    resize: none;
+}
+
+#contact-form input:focus-within, #contact-form textarea:focus-within {
+    border: none;
+}
+
+#contact-form .contact-btn {
+    width: 30%;
+    background-color: var(--color-six);
+    color: var(--color-five);
+    height: 3em;
+    position: relative;
+    margin: 0 35%;
+    cursor: pointer;
+    font-family: inherit;
+    background-clip: padding-box;
+    border: 1px solid var(--color-six);
+    border-radius: 0.25rem;
+}
+
+#contact-form .contact-btn:hover {
+    background-color: rgba(36,52,63, .9);
+    cursor: pointer;
+    background-clip: padding-box;
+    border: 1px solid rgba(36,52,63, .9);
+    border-radius: 0.25rem;
+}
+
+/* On screens that are 800px or less, set the contact-form width to 85% 
+and contact-btn width to 100% width with margin auto */
+
+@media screen and (max-width: 800px) {
+
+    #contact-form  {
+        width: 85%;
     }
 
+    #contact-form .contact-btn {
+        width: 100%;
+        margin: auto;
+    }
 }
 
 .form-error-email {
@@ -291,6 +445,7 @@ footer ul {
     line-height: 5.5em;
     display: flex;
     justify-content: center;
+    padding: 0;
 }
 
 footer ul a {
@@ -323,8 +478,9 @@ footer ul a:hover {
 }
 
 .error404_img {
-    width: auto;
-    height: 50vh;
+    display: block;
+    width: 60%;
+    height: auto;
     margin-left: auto;
     margin-right: auto;
 }
@@ -349,6 +505,7 @@ footer ul a:hover {
 
 .error404_footer {
     margin-top: 10vh;
+    text-align: center; 
 }
 
 /************************************************************* 404 Page End */

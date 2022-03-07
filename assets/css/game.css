@@ -326,3 +326,15 @@ input:checked + .volSwitch:after, input:checked + .fxSwitch:after {
 }
 
 /* Game Volume Controls End */
+
+/* Warning Modal */
+
+#warning .modal-body {
+  background-color: var(--color-five);
+}
+
+#warning p {
+  color: var(--color-six);
+  padding: 2em;
+  text-align: center;
+}

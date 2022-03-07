@@ -99,11 +99,17 @@ class MixOrMatch {
         this.ticker.innerText = this.totalClicks;
     } // Original Code End
     startCountdown() {
+        var isPaused = false;
         return setInterval(() => {
-            this.timeRemaining--;
-            this.timer.innerText = this.timeRemaining;
-            if(this.timeRemaining === 0)
-                this.gameOver();
+            if (isPaused == false) {
+                this.timeRemaining--;
+                this.timer.innerText = this.timeRemaining;
+                if(this.timeRemaining === 0)
+                    this.gameOver();
+            } else {
+                this.timeRemaining = this.timer.innerText;
+                clearInterval(this.countdown);
+            };
         }, 1000);
     }
     // Original Code Start - Created to allow the user to progress through levels
@@ -290,7 +296,37 @@ function fxMuteUnmute(currentGame) {
 }
 
 // Original Code - Will stop the game if the modal is closed by reloading page
-function stopGame() {
-    window.location.reload();
-    location.href='index.html#game';
-}
+
+
+
+function stopGame(currentGame) {
+    document.getElementsByClassName('exit-game').addEventListener(click (function() {
+        currentGame.audioController.bgMusic.muted = true;
+        currentGame.timer.pause();
+
+    }));
+};
+
+// $('#modal-close').click(function (currentGame) {
+
+
+//     $("#dialog-confirm").dialog({
+//         resizable: false,
+//         height: "auto",
+//         width: 400,
+//         modal: true,
+//         buttons: {
+//         "Exit": function() {
+//             $( this ).dialog( "close" );
+//             window.location.reload();
+//             location.href='index.html#game';
+//         },
+//         Cancel: function() {
+//             $( this ).dialog( "close" );
+//             timer.resume();
+//             currentGame.audioController.bgMusic.muted = true;
+//         }
+//         }
+//     });
+
+// });
