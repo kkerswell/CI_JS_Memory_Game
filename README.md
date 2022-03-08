@@ -15,7 +15,7 @@ Developer: Keith Kerswell
     1. [Target Audience](#target-audience)
     2. [User Requrements and Expectations](#user-requrements-and-expectations)
     3. [User Stories](#user-stories)
-3. [Design](#Design)
+3. [Design](#design)
     1. [Design Choices](#design-choices)
     2. [Colour Scheme](#colour-scheme)
     3. [Fonts](#fonts)
@@ -26,14 +26,14 @@ Developer: Keith Kerswell
     1. [Languages](#languages)
     2. [Frameworks & Tools](#frameworks--tools)
 5. [Features](#features)
-    1. [Logo and Navigation Bar](#logo-and-navigation-bar)
-    2. [Footer](#footer)
-    3. [Homepage](#homepage)
-    4. [About Us](#about-us)
-    5. [Our Animals](#our-animals)
-    6. [Fundraising](#fundraising)
-    7. [Contact Form](#contact-form)
-    8. [Map and address](#map-and-address)
+    1. [Navigation Bar](#navigation-bar)
+    2. [Main Area](#main-area)
+    3. [Instructions](#instructions)
+    4. [Game Button](#game-button)
+    5. [Game Modal](#game-modal)
+    6. [Contact Form](#contact-form)
+    7. [Footer](#footer)
+    8. [Future Feature](#future-feature)
 6. [Development](#development)
     1. [Building and Maintaining](#building-and-maintaining)
     2. [Commits](#commits)
@@ -42,12 +42,12 @@ Developer: Keith Kerswell
 7. [Testing](#testing)
     1. [HTML Validation](#html-validation)
     2. [CSS Validation](#css-validation)
-    3. [Accessibility](#accessibility)
-    4. [Performance](#performance)
+    3. [JS Validation](#js-validation)
+    4. [Performance and Accessibility](#performance-and-accessibility)
     5. [Responsiveness](#responsiveness)
-    6. [Browser compatibility](#browser-compatability)
-    7. [Testing user stories](#testing-user-stories)
-8. [Bugs](#Bugs)
+    6. [Browser Compatibility](#browser-compatibility)
+    7. [Testing User Stories](#testing-user-stories)
+8. [Problems](#problems)
 9. [Credits](#credits)
 10. [Acknowledgements](#acknowledgements)
 
@@ -144,7 +144,7 @@ The website consists of one page with four sections plus an additional full-scre
 - A game section which has a button to launch the game in a new modal.
 - A contact section with a contact form.
 
-## Wireframes
+### Wireframes
 
 <details><summary>Main Site (One Page Layout)</summary>
 <img src="docs/wireframes/page-wireframe.png">
@@ -226,6 +226,10 @@ The page consists of one page with a full-screen modal and seven features
 - User stories covered: 6, 12, 18
 
 ![Footer](docs/features/feature-footer.jpg)
+
+### Future Feature
+- A planned future realease would include an option given to the user on each level victory where they can choose to either close the game or continue to next level.
+- Optional: Include countdown timer within this feature to automatically launch the next level if no user inputs are detected.  
 
 ## Development 
 
@@ -313,7 +317,7 @@ https://jshint.com/ was used to validate Javascript
 <img src="docs/validation/js-game-two.jpg">
 </details><br>
 
-### Performance & Accessibility
+### Performance and Accessibility
 
 https://developers.google.com/web/tools/lighthouse was used to test performance.
 
@@ -363,7 +367,7 @@ http://ami.responsivedesign.is was used to test responsiveness.
 <img src="docs/responsive/footer.jpg">
 </details><br>
 
-### Browser compatibility
+### Browser Compatibility
 
 The website was tested on the following browsers:
 
@@ -371,7 +375,7 @@ The website was tested on the following browsers:
 - Mozilla Firefox
 - Microsoft Egde
 
-### Testing user stories
+### Testing User Stories
 
 1. As a first time user, I want to be able to navigate the site easily
 

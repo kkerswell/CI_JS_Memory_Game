@@ -75,6 +75,12 @@
   perspective: 500px;
 }
 
+@media screen and (orientation:landscape) {
+  .game-container {
+    grid-template-columns: repeat(8, auto);
+  }
+}
+
 .card, .card-back {
   background-color: transparent !important;
 }
