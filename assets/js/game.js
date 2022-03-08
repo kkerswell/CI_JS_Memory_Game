@@ -66,7 +66,7 @@ class MixOrMatch {
     // Original Code Start - Created to allow the user to progress through levels
     levelTwo() {
         this.level = 2;
-        this.totalTime = 70;
+        this.totalTime = 60;
         this.timeRemaining = this.totalTime;
         this.cardToCheck = null;
         this.matchedCards = [];
@@ -83,7 +83,7 @@ class MixOrMatch {
     }
     levelThree() {
         this.level = 3;
-        this.totalTime = 45;
+        this.totalTime = 35;
         this.timeRemaining = this.totalTime;
         this.cardToCheck = null;
         this.matchedCards = [];
@@ -198,14 +198,61 @@ class MixOrMatch {
 
 }
 
-if (document.readyState == 'loading') {
-    document.addEventListener('DOMContentLoaded', ready);
-} else {
-    ready();
+/**
+ * @param {*} currentGame
+ * Will allow the user to mute and unmute game music
+ */
+ function volMuteUnmute(currentGame) {
+    let volSwitch = document.getElementById('volSwitch');
+
+    volSwitch.addEventListener('change', function() {
+        if (!this.checked) {
+            currentGame.audioController.bgMusic.muted = true;
+            currentGame.audioController.victorySound.muted = true;
+            currentGame.audioController.gameOverSound.muted = true;
+        } else if (this.checked) {
+            currentGame.audioController.bgMusic.muted = false;
+            currentGame.audioController.victorySound.muted = false;
+            currentGame.audioController.gameOverSound.muted = false;
+        }
+    });
 }
 
+/**
+ * @param {*} currentGame 
+ * Will allow the user to mute and unmute game sound effects
+ */
+function fxMuteUnmute(currentGame) {
+    let fxSwitchInitialState = document.getElementById('fxSwitch').checked;
+    let fxSwitch = document.getElementById('fxSwitch');
+
+    if (fxSwitchInitialState === false) {
+        currentGame.audioController.flipSound.muted = true;
+        currentGame.audioController.matchSound.muted = true;        
+    } else if (fxSwitchInitialState === true) {
+        currentGame.audioController.flipSound.muted = false;
+        currentGame.audioController.matchSound.muted = false;
+    }
+
+    fxSwitch.addEventListener('change', function() {
+        if (!fxSwitch.checked) {
+            currentGame.audioController.flipSound.muted = true;
+            currentGame.audioController.matchSound.muted = true;
+        } else if (fxSwitch.checked) {
+            currentGame.audioController.flipSound.muted = false;
+            currentGame.audioController.matchSound.muted = false;
+        }
+    });
+}
+
+/**
+ * @class {*} MixOrMatch
+ * Creates new MixOrMatch
+ * Allow the user to progress through levels
+ */
 function ready() {
     let cards = Array.from(document.getElementsByClassName('card'));
+    var confirmClose = document.getElementsByClassName("confirmClose")[0];
     let game = new MixOrMatch(cards);
 
     cards.forEach(card => {
@@ -214,7 +261,10 @@ function ready() {
         });
     });
 
-    // Original Code - Created to allow the user to progress through levels
+    confirmClose.addEventListener('click', () => {
+        window.location.reload();
+        location.href='index.html#game';
+    });
 
     let newGameOverlay = document.getElementById('new-game-text');
     let victoryLevelOneOverlay = document.getElementById('level-one-victory-text');
@@ -254,79 +304,8 @@ function ready() {
     });
 }
 
-// Original Code - Will allow the user to mute and unmute game music
-function volMuteUnmute(currentGame) {
-    let volSwitch = document.getElementById('volSwitch');
-
-    volSwitch.addEventListener('change', function() {
-        if (!this.checked) {
-            currentGame.audioController.bgMusic.muted = true;
-            currentGame.audioController.victorySound.muted = true;
-            currentGame.audioController.gameOverSound.muted = true;
-        } else if (this.checked) {
-            currentGame.audioController.bgMusic.muted = false;
-            currentGame.audioController.victorySound.muted = false;
-            currentGame.audioController.gameOverSound.muted = false;
-        }
-    });
+if (document.readyState == 'loading') {
+    document.addEventListener('DOMContentLoaded', ready);
+} else {
+    ready();
 }
-
-// Original Code - Will allow the user to mute and unmute game sound effects
-function fxMuteUnmute(currentGame) {
-    let fxSwitchInitialState = document.getElementById('fxSwitch').checked;
-    let fxSwitch = document.getElementById('fxSwitch');
-
-    if (fxSwitchInitialState === false) {
-        currentGame.audioController.flipSound.muted = true;
-        currentGame.audioController.matchSound.muted = true;        
-    } else if (fxSwitchInitialState === true) {
-        currentGame.audioController.flipSound.muted = false;
-        currentGame.audioController.matchSound.muted = false;
-    }
-
-    fxSwitch.addEventListener('change', function() {
-        if (!fxSwitch.checked) {
-            currentGame.audioController.flipSound.muted = true;
-            currentGame.audioController.matchSound.muted = true;
-        } else if (fxSwitch.checked) {
-            currentGame.audioController.flipSound.muted = false;
-            currentGame.audioController.matchSound.muted = false;
-        }
-    });
-}
-
-// Original Code - Will stop the game if the modal is closed by reloading page
-
-
-
-function stopGame(currentGame) {
-    document.getElementsByClassName('exit-game').addEventListener(click (function() {
-        currentGame.audioController.bgMusic.muted = true;
-        currentGame.timer.pause();
-
-    }));
-};
-
-// $('#modal-close').click(function (currentGame) {
-
-
-//     $("#dialog-confirm").dialog({
-//         resizable: false,
-//         height: "auto",
-//         width: 400,
-//         modal: true,
-//         buttons: {
-//         "Exit": function() {
-//             $( this ).dialog( "close" );
-//             window.location.reload();
-//             location.href='index.html#game';
-//         },
-//         Cancel: function() {
-//             $( this ).dialog( "close" );
-//             timer.resume();
-//             currentGame.audioController.bgMusic.muted = true;
-//         }
-//         }
-//     });
-
-// });

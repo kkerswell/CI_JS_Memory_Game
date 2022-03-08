@@ -1,15 +1,3 @@
-/* Body Start */
-
-.modal-content {
-  background-color: var(--color-six) !important;
-}
-
-.modal-body {
-  padding: 0 !important;
-}
-
-/* Body End */
-
 /* Overlay Start */
 
 .overlay-text {  
@@ -20,7 +8,7 @@
   flex-direction: column;
   color: var(--color-one);
   transition: background-color 500ms, font-size 500ms;
-  font-size: 10vw !important;
+  font-size: 6em;
   width: 100%;
   height: inherit;
   position: fixed;
@@ -37,7 +25,9 @@
 .overlay-text.visible {
   display: block;
   animation: overlay-grow 500ms forwards;
-  position: absolute; 
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 
 .overlay-text-words {
@@ -49,6 +39,7 @@
 
 .licence {
   text-align: center;
+  padding-top: 1em;
 }
 
 .licence a {
@@ -67,7 +58,7 @@
 
 .game-info {
   color: #f4f7f5;
-  font-size: 4vw;
+  font-size: 2em;
   padding: 0 15vw;
 }
 
@@ -79,7 +70,7 @@
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(4, auto);
-  grid-gap: 1em;
+  grid-gap: .5em;
   justify-content: center;
   perspective: 500px;
 }
@@ -95,8 +86,8 @@
 .card {
   position: relative;
   cursor: grab;
-  width: 8vw;
-  height: 10.5vw;
+  width: 4em;
+  height: 5em;
   border: none !important;
 }
 
@@ -109,8 +100,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 8vw;
-  height: calc(8vw * 1.3);
+  width: 4em;
+  height: 5em;
   border-radius: 12px;
   border-width: 1px;
   border-style: solid;
@@ -166,7 +157,7 @@
 }
 
 .card-front img {
-  width: 250%;
+  width: 200%;
   height: auto;
 }
 
@@ -249,7 +240,7 @@
 @media screen and (orientation: landscape) {
   @media (min-width: 652px) and (max-width: 655px) {
     .licence a {
-      font-size: 1em;
+      font-size: .5em;
     }
   }
 
@@ -260,7 +251,7 @@
 
   @media (min-width: 481px) and (max-width: 767px) {
     .licence a {
-      font-size: 1em;
+      font-size: .5em;
     }
   }
 }
@@ -272,11 +263,11 @@
   margin: 0 auto;
   padding: 2em 0;
   display: grid;
-  grid-template-columns: 40% auto 30%;
-  grid-gap: 10px;  
+  grid-template-columns: repeat(2, auto);
+  grid-gap: 1em;
   color: var(--color-five);
-  width: 60vw;
-  font-size: 3vw;
+  font-size: 1.5em !important;
+  justify-content: center;
 }
 
 .item1, .item3 {
@@ -287,14 +278,10 @@
   grid-column: 3;
 }
 
-.material-icons {
-  font-size: 4vw !important;
-}
-
 .volSwitch, .fxSwitch {
   background-color: white;
-  width: 8vw;
-  height: 4vw;
+  width: 4vw;
+  height: 2vw;
   position: relative;
   display: inline-block;
   border-radius: 30vw;
@@ -308,8 +295,8 @@ input:checked + .volSwitch::before, input:checked + .fxSwitch::before {
 
 .volSwitch::before, .volSwitch::after, .fxSwitch::before, .fxSwitch::after {
   content:'';
-  width:4vw;
-  height:4vw;
+  width:2vw;
+  height:2vw;
   position:absolute;
   border-radius:50%;
   background-color: #ccc;
@@ -326,15 +313,3 @@ input:checked + .volSwitch:after, input:checked + .fxSwitch:after {
 }
 
 /* Game Volume Controls End */
-
-/* Warning Modal */
-
-#warning .modal-body {
-  background-color: var(--color-five);
-}
-
-#warning p {
-  color: var(--color-six);
-  padding: 2em;
-  text-align: center;
-}
