@@ -1,6 +1,6 @@
-/* Overlay Start */
+/*************************************** Overlay Start */
 
-.overlay-text {  
+.overlay-text {
   z-index: 100;
   display: none;
   justify-content: center;
@@ -35,7 +35,11 @@
   top: 25vh;
 }
 
-/* Overlay End */
+/***************************************** Overlay End */
+
+/********************************** Main Content Start */
+
+/**** Licence Start ****/
 
 .licence {
   text-align: center;
@@ -45,27 +49,25 @@
 .licence a {
   text-decoration: none;
   color: var(--color-five);
-  font-size: 1rem;
+  font-size: .5rem;
 }
 
-/* Timer and Clicks Start */
-
-.game-info-container {
-  padding: 1em;
-}
+/**** Timer and Clicks Start ****/
 
 .game-info {
   color: #f4f7f5;
-  font-size: 2rem;
+  font-size: 1.5rem;
   padding: 0 15vw;
   display: inline-grid;
   grid-template-columns: repeat(2, 5em);
   grid-template-rows: repeat(2, 2.5em);
 }
 
-/* Timer and Clicks End */
+.game-info-container {
+  overflow: hidden;
+}
 
-/* Cards Start */
+/**** Cards Start ****/
 
 .game-container {
   margin: 0 auto;
@@ -74,17 +76,11 @@
   grid-gap: .5em;
   justify-content: center;
   perspective: 500px;
+  overflow-x: scroll;
 }
 
-/* Changes the card layout from rows of 4 cards when in potrait mode
-to rows of 8 when in landscap mode. */
-@media screen and (orientation:landscape) {
-  .game-container {
-    grid-template-columns: repeat(8, auto);
-  }
-}
-
-.card, .card-back {
+.card,
+.card-back {
   background-color: transparent !important;
 }
 
@@ -119,26 +115,12 @@ to rows of 8 when in landscap mode. */
   backface-visibility: hidden;
 }
 
-@media screen and (min-width: 360px) {
-  .card {
-    width: 5rem;
-    height: 6rem;
-  }
-
-  .card-face {
-    width: 5rem;
-    height: 6rem;
-    border-radius: 12px;
-    border-width: 1px;
-  }
-}
-
 .card.visible .card-back {
-  transform: rotateY(-180deg); 
+  transform: rotateY(-180deg);
 }
 
 .card.visible .card-front {
-  transform: rotateY(0); 
+  transform: rotateY(0);
 }
 
 .card.matched .card-front .card-value {
@@ -148,7 +130,7 @@ to rows of 8 when in landscap mode. */
 .card-back {
   background-color: #f4f7f5;
   border-color: var(--color-three);
-  transform: rotateY(0); 
+  transform: rotateY(0);
 }
 
 .brain {
@@ -185,12 +167,16 @@ to rows of 8 when in landscap mode. */
 }
 
 @keyframes dance {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: scale(1)
   }
+
   25% {
     transform: scale(.8)
   }
+
   75% {
     transform: scale(.8)
   }
@@ -201,37 +187,41 @@ to rows of 8 when in landscap mode. */
     background-color: rgba(255, 255, 255, 0);
     font-size: 0;
   }
+
   to {
     background-color: rgba(255, 255, 255, .8);
     font-size: 6em;
   }
 }
 
-/* Game Volume Controls Start */
+/**** Game Volume Controls Start ****/
 
 .volume-container {
   margin: 0 auto;
   padding: 2em 0;
   display: grid;
   grid-template-columns: repeat(2, auto);
-  grid-gap: 1em;
+  grid-gap: .5em;
   color: var(--color-five);
-  font-size: 2rem;
+  font-size: 1.5rem;
   justify-content: center;
 }
 
-.item1, .item3 {
+.item1,
+.item3 {
   grid-column: 1;
 }
 
-.item2, .item4 {
+.item2,
+.item4 {
   grid-column: 3;
 }
 
-.volSwitch, .fxSwitch {
+.volSwitch,
+.fxSwitch {
   background-color: white;
-  width: 4vw;
-  height: 2vw;
+  width: 1.5em;
+  height: 1em;
   position: relative;
   display: inline-block;
   border-radius: 30vw;
@@ -239,27 +229,108 @@ to rows of 8 when in landscap mode. */
   user-select: none;
 }
 
-input:checked + .volSwitch::before, input:checked + .fxSwitch::before {
+input:checked+.volSwitch::before,
+input:checked+.fxSwitch::before {
   background-color: white;
 }
 
-.volSwitch::before, .volSwitch::after, .fxSwitch::before, .fxSwitch::after {
-  content:'';
-  width:2vw;
-  height:2vw;
-  position:absolute;
-  border-radius:50%;
+.volSwitch::before,
+.volSwitch::after,
+.fxSwitch::before,
+.fxSwitch::after {
+  content: '';
+  width: 1em;
+  height: 1em;
+  position: absolute;
+  border-radius: 50%;
   background-color: #ccc;
   top: 0%;
   left: 0%;
   transition: all 350ms cubic-bezier(0, 0.95, 0.38, 0.98), 150ms ease;
 }
 
-input:checked + .volSwitch:after, input:checked + .fxSwitch:after {
+input:checked+.volSwitch:after,
+input:checked+.fxSwitch:after {
   background: #2196F3;
-  transform: translateX(100%);
-  -webkit-transform: translateX(100%);
-  -ms-transform: translateX(100%);
+  transform: translateX(50%);
+  -webkit-transform: translateX(50%);
+  -ms-transform: translateX(50%);
 }
 
-/* Game Volume Controls End */
+/*********************************** Main Content Ends */
+
+/*************************************** Media Queries */
+
+/* Changes the card layout from rows of 4 cards when in potrait mode
+to rows of 8 when in landscap mode. */
+@media screen and (orientation:landscape) {
+  .game-container {
+    grid-template-columns: repeat(8, auto);
+  }
+}
+
+/* For screen sizes up to 359px wide */
+@media only screen and (max-width: 359px) {
+  .overlay-text {
+    font-size: xx-large;
+  }
+
+  .overlay-text-small {
+    font-size: medium;
+  }
+
+  .card {
+    width: 3rem;
+    height: 4rem;
+  }
+
+  .card-face {
+    width: 3rem;
+    height: 4rem;
+  }
+
+  .game-info {
+    font-size: 1rem;
+  }
+
+  .volume-container {
+    font-size: 1rem;
+  }
+
+  .material-icons {
+    font-size: 1rem;
+  }
+}
+
+/* For screen sizes between 359px (set above) and 767px wide */
+@media only screen and (max-width: 767px) {
+  .overlay-text {
+    font-size: xx-large;
+  }
+
+  .overlay-text-small {
+    font-size: medium;
+  }
+
+  .card {
+    width: 4rem;
+    height: 5.5rem;
+  }
+
+  .card-face {
+    width: 4rem;
+    height: 5.5rem;
+  }
+
+  .game-info {
+    font-size: 1.5rem;
+  }
+
+  .volume-container {
+    font-size: 1.5rem;
+  }
+
+  .material-icons {
+    font-size: 1.5rem;
+  }
+}

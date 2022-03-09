@@ -31,6 +31,6 @@
       "editor.defaultFormatter": "vscode.typescript-language-features"
    },
    "[css]": {
-      "editor.defaultFormatter": "michelemelluso.code-beautifier"
+      "editor.defaultFormatter": "HookyQR.beautify"
    }
 }

@@ -22,7 +22,8 @@
     --card-width: 10%;
 }
 
-body, html {
+body,
+html {
     margin: 0;
     padding: 0;
     width: 100%;
@@ -48,18 +49,23 @@ p, h1, h2, h3, h4, h5, a {
 .cmt-1 {
     margin-top: calc(var(--margin) * 5);
 }
+
 .cmt-2 {
     margin-top: calc(var(--margin) * 10);
 }
+
 .cmt-3 {
     margin-top: calc(var(--margin) * 15);
 }
+
 .cmt-4 {
     margin-top: calc(var(--margin) * 20);
 }
+
 .cmt-5 {
     margin-top: calc(var(--margin) * 25);
 }
+
 .cmt-6 {
     margin-top: calc(var(--margin) * 30);
 }
@@ -91,7 +97,7 @@ header {
     color: var(--color-five);
     opacity: 1 !important;
     position: relative;
-    font-size: 1.5vh;
+    font-size: .75rem;
     margin-left: 1em;
 }
 
@@ -163,7 +169,8 @@ header {
     width: 100%;
 }
 
-.how_to_play_text, .how_to_play_image {
+.how_to_play_text,
+.how_to_play_image {
     width: 50%;
 }
 
@@ -285,6 +292,8 @@ how_to_play_text to 100% width and how_to_play_image to display none */
     transform: translateY(1em);
 }
 
+/******************************************* Main End */
+
 /***************************************** Form Start */
 
 #contact-form {
@@ -297,7 +306,8 @@ how_to_play_text to 100% width and how_to_play_image to display none */
     color: var(--color-five);
 }
 
-#contact-form input, #contact-form textarea {
+#contact-form input,
+#contact-form textarea {
     margin: 1em 0 2em 0;
     width: 100%;
     padding: 0.375rem 0.75rem;
@@ -309,10 +319,11 @@ how_to_play_text to 100% width and how_to_play_image to display none */
     background-clip: padding-box;
     border: 1px solid var(--color-five);
     border-radius: 0.25rem;
-    font-family: inherit; 
+    font-family: inherit;
 }
 
-input:focus-visible, textarea:focus-visible {
+input:focus-visible,
+textarea:focus-visible {
     outline: var(--color-six) solid 2px;
 }
 
@@ -325,7 +336,8 @@ input:focus-visible, textarea:focus-visible {
     resize: none;
 }
 
-#contact-form input:focus-within, #contact-form textarea:focus-within {
+#contact-form input:focus-within,
+#contact-form textarea:focus-within {
     border: none;
 }
 
@@ -344,10 +356,10 @@ input:focus-visible, textarea:focus-visible {
 }
 
 #contact-form .contact-btn:hover {
-    background-color: rgba(36,52,63, .9);
+    background-color: rgba(36, 52, 63, .9);
     cursor: pointer;
     background-clip: padding-box;
-    border: 1px solid rgba(36,52,63, .9);
+    border: 1px solid rgba(36, 52, 63, .9);
     border-radius: 0.25rem;
 }
 
@@ -356,7 +368,7 @@ and contact-btn width to 100% width with margin auto */
 
 @media screen and (max-width: 800px) {
 
-    #contact-form  {
+    #contact-form {
         width: 85%;
     }
 
@@ -376,7 +388,7 @@ and contact-btn width to 100% width with margin auto */
 }
 
 .form-error-email a:hover {
-    color: rgba(36,52,63, .7);
+    color: rgba(36, 52, 63, .7);
 }
 
 .form-hidden {
@@ -422,7 +434,7 @@ footer ul a:hover {
 
 /***************************************** Footer End */
 
-/*********************************************************** 404 Page Start */
+/************************************* 404 Page Start */
 
 .error404_body {
     background: unset;
@@ -452,7 +464,8 @@ footer ul a:hover {
     color: #dca000;
 }
 
-.error404_footer p, .error404_footer ul a {
+.error404_footer p,
+.error404_footer ul a {
     color: var(--color-six);
 }
 
@@ -462,7 +475,7 @@ footer ul a:hover {
 
 .error404_footer {
     margin-top: 10vh;
-    text-align: center; 
+    text-align: center;
 }
 
-/************************************************************* 404 Page End */
+/*************************************** 404 Page End */
