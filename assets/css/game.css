@@ -8,7 +8,7 @@
   flex-direction: column;
   color: var(--color-one);
   transition: background-color 500ms, font-size 500ms;
-  font-size: 6em;
+  font-size: 7rem;
   width: 100%;
   height: inherit;
   position: fixed;
@@ -19,7 +19,7 @@
 }
 
 .overlay-text-small {
-  font-size: .3em;
+  font-size: 3rem;
 }
 
 .overlay-text.visible {
@@ -45,21 +45,22 @@
 .licence a {
   text-decoration: none;
   color: var(--color-five);
-  font-size: 1em;
+  font-size: 1rem;
 }
 
 /* Timer and Clicks Start */
 
 .game-info-container {
-  display: flex;
-  justify-content: space-between;
   padding: 1em;
 }
 
 .game-info {
   color: #f4f7f5;
-  font-size: 2em;
+  font-size: 2rem;
   padding: 0 15vw;
+  display: inline-grid;
+  grid-template-columns: repeat(2, 5em);
+  grid-template-rows: repeat(2, 2.5em);
 }
 
 /* Timer and Clicks End */
@@ -75,6 +76,8 @@
   perspective: 500px;
 }
 
+/* Changes the card layout from rows of 4 cards when in potrait mode
+to rows of 8 when in landscap mode. */
 @media screen and (orientation:landscape) {
   .game-container {
     grid-template-columns: repeat(8, auto);
@@ -92,8 +95,8 @@
 .card {
   position: relative;
   cursor: grab;
-  width: 4em;
-  height: 5em;
+  width: 5rem;
+  height: 6.5rem;
   border: none !important;
 }
 
@@ -106,14 +109,28 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 4em;
-  height: 5em;
+  width: 5rem;
+  height: 6.5rem;
   border-radius: 12px;
   border-width: 1px;
   border-style: solid;
   overflow: hidden;
   transition: transform 500ms ease-in-out;
   backface-visibility: hidden;
+}
+
+@media screen and (min-width: 360px) {
+  .card {
+    width: 5rem;
+    height: 6rem;
+  }
+
+  .card-face {
+    width: 5rem;
+    height: 6rem;
+    border-radius: 12px;
+    border-width: 1px;
+  }
 }
 
 .card.visible .card-back {
@@ -190,79 +207,6 @@
   }
 }
 
-/* Card Media Queries */
-
-@media screen and (orientation: portrait) {
-  /* 
-    ##Device = Tablets, Ipads (portrait)
-    ##Screen = B/w 768px to 1024px
-  */
-
-  @media (min-width: 768px) and (max-width: 1024px) {
-    .licence a {
-      font-size: 1em;
-    }
-
-    .card-face {
-      height: 10em;
-      width: 6em;
-    }
-
-    .game-container {
-      grid-gap: 3em;
-      height: 70%;
-    }
-  }
-}
-
-@media screen and (orientation: portrait) {
-  /* 
-    ##Device = Most of the Smartphones Mobiles (Portrait)
-    ##Screen = B/w 240px to 767px
-  */
-
-  @media (min-width: 240px) and (max-width: 767px) {
-    .licence a {
-      font-size: .5em;
-    }
-
-    .card-face {
-      height: 5em;
-      width: 3em;
-    }
-
-    .game-container {
-      grid-gap: 2em;
-      height: 70%;
-    }
-  }
-}
-
-/*****************************************************Landscape*/
-/* 
-  ##Device = galaxay fold landscape
-  ##Screen = B/w 653
-*/
-@media screen and (orientation: landscape) {
-  @media (min-width: 652px) and (max-width: 655px) {
-    .licence a {
-      font-size: .5em;
-    }
-  }
-
-  /* 
-    ##Device = Low Resolution Tablets, Mobiles (Landscape)
-    ##Screen = B/w 481px to 767px
-  */
-
-  @media (min-width: 481px) and (max-width: 767px) {
-    .licence a {
-      font-size: .5em;
-    }
-  }
-}
-/* Cards End */
-
 /* Game Volume Controls Start */
 
 .volume-container {
@@ -272,7 +216,7 @@
   grid-template-columns: repeat(2, auto);
   grid-gap: 1em;
   color: var(--color-five);
-  font-size: 1.5em !important;
+  font-size: 2rem;
   justify-content: center;
 }
 
